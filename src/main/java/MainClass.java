@@ -1,10 +1,24 @@
 
+import packageCharacters.Characters;
+import packageDefenseTools.DefenseTools;
+import packageEnemies.CharatersEnemies;
+import packageWeapons.Weapons;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainClass {
 
+    private static Scanner sc;
+
     public static void main(String[] args) {
+
+        sc = new Scanner(System.in);
+
+        ArrayList<Characters> characters = new ArrayList();
+        ArrayList<Weapons> weapons = new ArrayList();
+        ArrayList<DefenseTools> defenseTools = new ArrayList();
+        ArrayList<CharatersEnemies> charatersEnemies = new ArrayList();
 
         System.out.println("_________________________________________________________________________________________________\n" +
                 "|                                                                                               |\n" +
