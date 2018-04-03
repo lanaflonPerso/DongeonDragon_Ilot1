@@ -6,10 +6,12 @@ import packageWeapons.Weapons;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Random;
 
 public class MainClass {
 
     private static Scanner sc;
+
 
     public static void main(String[] args) {
 
@@ -55,5 +57,23 @@ public class MainClass {
 
         ////////////////////////////______________DESSIN_____________________////////////////////////////////
 
+        boolean lanceDe=true;
+        while(lanceDe) {
+            System.out.println("Que voulez vous faire :\n\t1-Lancer le Dé\n\t2-Sortir");
+            String choixDeSix=sc.nextLine();
+            if(choixDeSix.equals("1")){
+                deSix();
+            }else if(choixDeSix.equals("2")){
+                lanceDe=false;
+            }else{
+                System.out.println("2 choix seulement : 1 ou 2");
+            }
+
+        }
     }
+    ///////////////////////////////////////_________________Méthode_______________//////////////////////////////
+private static void deSix(){
+Random deSix= new Random();
+    System.out.println("Résultat de votre Lancé : " + (deSix.nextInt(6)+1));
+}
 }
