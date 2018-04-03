@@ -15,7 +15,7 @@ public class Dragon extends CharactersEnemies {
 
     public void setAttackLevel(String attackLevel) {
         this.attackLevel = attackLevel;
-    }
+    } 
 
     @Override
     public String toString() {

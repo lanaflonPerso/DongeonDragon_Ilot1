@@ -13,7 +13,7 @@ public class Succube extends  CharactersEnemies {
         return attackLevel;
     }
 
-    public void setAttackLevel(String attackLevel) {
+    public void setAttackLevel(String attackLevel) { 
         this.attackLevel = attackLevel;
     }
 

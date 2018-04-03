@@ -20,17 +20,22 @@ public class MainClass {
 
         Dragon dragon = null;
         Wizzard wizzard = null;
-        Succube succube = null;
+        Succube succube = null; 
+        Weapons weapons = null;
 
-        ArrayList<CharactersPlayer> charactersPlayersList = new ArrayList();
-        ArrayList<Weapons> weaponsList = new ArrayList();
-        ArrayList<DefenseTools> defenseToolsList = new ArrayList();
-        ArrayList<Dragon> dragonsList = new ArrayList();
-        ArrayList<Succube> succubesList = new ArrayList();
-        ArrayList<Wizzard> wizzardsList = new ArrayList();
+        ArrayList<CharactersPlayer> charactersPlayersList = new ArrayList<CharactersPlayer>();
+        ArrayList<Weapons> weaponsList = new ArrayList<Weapons>();
+        ArrayList<DefenseTools> defenseToolsList = new ArrayList<DefenseTools>();
+        ArrayList<Dragon> dragonsList = new ArrayList<Dragon>();
+        ArrayList<Succube> succubesList = new ArrayList<Succube>();
+        ArrayList<Wizzard> wizzardsList = new ArrayList<Wizzard>();
 
         System.out.println(Msg.getMyMsgPourri());
 
+        weaponsList.add(new Weapons("Arc", 50, 25, 0));
+        weaponsList.add(new Weapons("Massue", 0, 0, 30));
+        weaponsList.add(new Weapons("Epee", 0, 0, 25));
+        
         dragonsList.add(new Dragon("Dragon Brun", "image", "90", "15"));
         dragonsList.add(new Dragon("Dragon de sang", "image", "140", "20"));
         dragonsList.add(new Dragon("Dragon de glace", "image", "180", "30"));
@@ -48,13 +53,15 @@ public class MainClass {
         succubesList.add(new Succube("succube seduisante","image","80","50"));
         succubesList.add(new Succube("succube maitresse","image","120","75"));
 
-
+        
         displayDragonsList(dragonsList);
         displayWizzardList(wizzardsList);
         displaySuccubeList(succubesList);
+        displayWeaponsList(weaponsList);
 
     }
 
+    
 
     public static void displayDragonsList(ArrayList<Dragon> dragon) {
         for (Dragon d : dragon) {
@@ -73,4 +80,26 @@ public class MainClass {
             System.out.println(s.toString());
         }
     }
+    
+    public static void displayWeaponsList(ArrayList<Weapons> weapons) {
+    	for(Weapons w : weapons) {
+    		System.out.println(w.toString());
+    	}
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
