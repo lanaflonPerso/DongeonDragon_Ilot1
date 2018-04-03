@@ -36,14 +36,14 @@ public class MainClass {
                 System.out.println("<----------------------->");
                 boolean lanceDe = true;
                 while (lanceDe) {
-                    System.out.println("Que voulez vous faire :\n\t1-Lancer le Dé\n\t2-Sortir");
+                    System.out.println("Que voulez vous faire :\n\t1-Lancer le Dé\n\t2-Sortir\n\t3-Quitter le jeu");
                     String choixDeSix = sc.nextLine();
                     if (choixDeSix.equals("1")) {
                         deSix();
                     } else if (choixDeSix.equals("2")) {
                         lanceDe = false;
                     } else {
-                        System.out.println("2 choix seulement : 1 ou 2");
+                        System.out.println("3 choix seulement : 1,2 ou,3");
                     }
 
                 }
