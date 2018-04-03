@@ -1,4 +1,3 @@
-
 import packageCharacters.CharactersPlayer;
 import packageDefenseTools.DefenseTools;
 import packageEnemies.CharactersEnemies;
@@ -22,58 +21,50 @@ public class MainClass {
         ArrayList<DefenseTools> defenseTools = new ArrayList();
         ArrayList<CharactersEnemies> charactersEnemies = new ArrayList();
 
-        System.out.println("_________________________________________________________________________________________________\n" +
-                "|                                                                                               |\n" +
-                "|                                                                                               |\n" +
-                "| ,--.                                                 |    ,--.                                |\n" +
-                "| |   |,---.,---.,---.,---.,---.,---.    ,---.,---.,---|    |   |,---.,---.,---.,---.,---.,---. |\n" +
-                "| |   ||   ||   ||   ||---'|   ||   |    ,---||   ||   |    |   ||    ,---||   ||   ||   |`---. |\n" +
-                "| `--' `---'`   '`---|`---'`---'`   '    `---^`   '`---'    `--' `    `---^`---|`---'`   '`---' |\n" +
-                "|               `---'                                                     `---'                 |\n" +
-                "|                                                                                               |\n" +
-                "|                                                                                               |\n" +
-                "|  /'                                                                                           |\n" +
-                "|  ||                                                                                           |\n" +
-                "|  ||      ** *                                                                                 |\n" +
-                "|  ||      __X_                                                                                 |\n" +
-                "|  ||     ( ___\\                        .     _///_,                                            |\n" +
-                "|  ||     |:  \\\\                      .      / ` ' '>                                           |\n" +
-                "| ><><  ___)..:/_#__,                   )   o'  __/_'>                                          |\n" +
-                "| (X|) (|+(____)+\\ _)                  (   /  _/  )_\\'>                                         |\n" +
-                "|  o|_\\/>> + + + << \\                   ' \"__/   /_/\\_>                                         |\n" +
-                "|     |:\\/|+ + + +| \\_\\<                   ____/_/_/_/                                          |\n" +
-                "|     \\./  XXXXXX.  (o_)_                 /,---, _/ /                                           |\n" +
-                "|        /+ + + |   \\:|                  \"\"  /_/_/_/                                            |\n" +
-                "|       /+ +/+ +|  -/->>>----.              /_(_(_(_                 \\                          |\n" +
-                "|      /+ +|+ /XX /   _--,  _ \\            (   \\_\\_\\\\_               )\\                         |\n" +
-                "|    \\+ + + /  |X   (,\\- \\/_ ,              \\'__\\_\\_\\_\\__            ).\\                        |\n" +
-                "|     /\\+ + /\\  |X \\    /,//_/              //____|___\\__)           )_/                        |\n" +
-                "|    +_+_+_( )o_)X  \\  (( ///               |  _  \\'___'_(           /'                         |\n" +
-                "|     (_o(  /__/ X   \\  \\\\//                \\_ (-'\\'___'_\\      __,'_'                          |\n" +
-                "|      \\_|  |_/  X    \\ ///                 __) \\  \\\\___(_   __/.__,'                           |\n" +
-                "|      \\_| >(_/        \\,/               ,((,-,__\\  '\", __\\_/. __,'                             |\n" +
-                "| ,////__o\\ /__////,    V                           '\"./_._._-'                                 |\n" +
-                "|_______________________________________________________________________________________________|");
+        System.out.println("_________________________________________________________________________________________________\n" + "|                                                                                               |\n" + "|                                                                                               |\n" + "| ,--.                                                 |    ,--.                                |\n" + "| |   |,---.,---.,---.,---.,---.,---.    ,---.,---.,---|    |   |,---.,---.,---.,---.,---.,---. |\n" + "| |   ||   ||   ||   ||---'|   ||   |    ,---||   ||   |    |   ||    ,---||   ||   ||   |`---. |\n" + "| `--' `---'`   '`---|`---'`---'`   '    `---^`   '`---'    `--' `    `---^`---|`---'`   '`---' |\n" + "|               `---'                                                     `---'                 |\n" + "|                                                                                               |\n" + "|                                                                                               |\n" + "|  /'                                                                                           |\n" + "|  ||                                                                                           |\n" + "|  ||      ** *                                                                                 |\n" + "|  ||      __X_                                                                                 |\n" + "|  ||     ( ___\\                        .     _///_,                                            |\n" + "|  ||     |:  \\\\                      .      / ` ' '>                                           |\n" + "| ><><  ___)..:/_#__,                   )   o'  __/_'>                                          |\n" + "| (X|) (|+(____)+\\ _)                  (   /  _/  )_\\'>                                         |\n" + "|  o|_\\/>> + + + << \\                   ' \"__/   /_/\\_>                                         |\n" + "|     |:\\/|+ + + +| \\_\\<                   ____/_/_/_/                                          |\n" + "|     \\./  XXXXXX.  (o_)_                 /,---, _/ /                                           |\n" + "|        /+ + + |   \\:|                  \"\"  /_/_/_/                                            |\n" + "|       /+ +/+ +|  -/->>>----.              /_(_(_(_                 \\                          |\n" + "|      /+ +|+ /XX /   _--,  _ \\            (   \\_\\_\\\\_               )\\                         |\n" + "|    \\+ + + /  |X   (,\\- \\/_ ,              \\'__\\_\\_\\_\\__            ).\\                        |\n" + "|     /\\+ + /\\  |X \\    /,//_/              //____|___\\__)           )_/                        |\n" + "|    +_+_+_( )o_)X  \\  (( ///               |  _  \\'___'_(           /'                         |\n" + "|     (_o(  /__/ X   \\  \\\\//                \\_ (-'\\'___'_\\      __,'_'                          |\n" + "|      \\_|  |_/  X    \\ ///                 __) \\  \\\\___(_   __/.__,'                           |\n" + "|      \\_| >(_/        \\,/               ,((,-,__\\  '\", __\\_/. __,'                             |\n" + "| ,////__o\\ /__////,    V                           '\"./_._._-'                                 |\n" + "|_______________________________________________________________________________________________|");
 
         ////////////////////////////______________DESSIN_____________________////////////////////////////////
+        boolean restInGame = true;
+        while(restInGame) {
+            System.out.println("Que voulez vous faire :\n\t1-Jouer\n\t2-Quitter");
+            String startGame = sc.nextLine();
+            if (startGame.equals("1")){
+                System.out.println("Nom du Player One");
+                String playeOneName = sc.nextLine();
+                System.out.println("<----------------------->");
+                System.out.println(playeOneName);
+                System.out.println("<----------------------->");
+                boolean lanceDe = true;
+                while (lanceDe) {
+                    System.out.println("Que voulez vous faire :\n\t1-Lancer le Dé\n\t2-Sortir");
+                    String choixDeSix = sc.nextLine();
+                    if (choixDeSix.equals("1")) {
+                        deSix();
+                    } else if (choixDeSix.equals("2")) {
+                        lanceDe = false;
+                    } else {
+                        System.out.println("2 choix seulement : 1 ou 2");
+                    }
 
-        boolean lanceDe=true;
-        while(lanceDe) {
-            System.out.println("Que voulez vous faire :\n\t1-Lancer le Dé\n\t2-Sortir");
-            String choixDeSix=sc.nextLine();
-            if(choixDeSix.equals("1")){
-                deSix();
-            }else if(choixDeSix.equals("2")){
-                lanceDe=false;
+                }
+
+
+
+
+            }else if (startGame.equals("2")){
+                 restInGame = false;
             }else{
                 System.out.println("2 choix seulement : 1 ou 2");
             }
 
+
+
         }
     }
+
     ///////////////////////////////////////_________________Méthode_______________//////////////////////////////
-private static void deSix(){
-Random deSix= new Random();
-    System.out.println("Résultat de votre Lancé : " + (deSix.nextInt(6)+1));
-}
+    private static void deSix() {
+        Random deSix = new Random();
+        System.out.println("Résultat de votre Lancé : " + (deSix.nextInt(6) + 1));
+    }
 }
