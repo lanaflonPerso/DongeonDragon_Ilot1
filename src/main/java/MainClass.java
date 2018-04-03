@@ -1,5 +1,5 @@
 
-import packageCharacters.Characters;
+import packageCharacters.CharacterPlayer;
 import packageDefenseTools.DefenseTools;
 import packageEnemies.CharatersEnemies;
 import packageWeapons.Weapons;
@@ -15,7 +15,7 @@ public class MainClass {
 
         sc = new Scanner(System.in);
 
-        ArrayList<Characters> characters = new ArrayList();
+        ArrayList<CharacterPlayer> characters = new ArrayList();
         ArrayList<Weapons> weapons = new ArrayList();
         ArrayList<DefenseTools> defenseTools = new ArrayList();
         ArrayList<CharatersEnemies> charatersEnemies = new ArrayList();
