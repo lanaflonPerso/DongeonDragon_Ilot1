@@ -1,7 +1,7 @@
 
 import packageCharacters.CharactersPlayer;
 import packageDefenseTools.DefenseTools;
-import packageEnemies.CharatersEnemies;
+import packageEnemies.CharactersEnemies;
 import packageWeapons.Weapons;
 
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ public class MainClass {
         ArrayList<CharactersPlayer> characters = new ArrayList();
         ArrayList<Weapons> weapons = new ArrayList();
         ArrayList<DefenseTools> defenseTools = new ArrayList();
-        ArrayList<CharatersEnemies> charatersEnemies = new ArrayList();
+        ArrayList<CharactersEnemies> charactersEnemies = new ArrayList();
 
         System.out.println("_________________________________________________________________________________________________\n" +
                 "|                                                                                               |\n" +
