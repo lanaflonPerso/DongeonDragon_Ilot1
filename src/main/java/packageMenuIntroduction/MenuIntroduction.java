@@ -1,8 +1,8 @@
-package msgPourris;
+package packageMenuIntroduction;
 
-public class Msg {
+public class MenuIntroduction {
 
-    private static String myMsgPourri = "_________________________________________________________________________________________________\n" +
+    private static String dessinMenu = "_________________________________________________________________________________________________\n" +
             "|                                                                                               |\n" +
             "|                                                                                               |\n" +
             "| ,--.                                                 |    ,--.                                |\n" +
@@ -35,8 +35,8 @@ public class Msg {
             "| ,////__o\\ /__////,    V                           '\"./_._._-'                                 |\n" +
             "|_______________________________________________________________________________________________|";
 
-    public static String getMyMsgPourri() {
-        return myMsgPourri;
+    public static String getDessinMenu() {
+        return dessinMenu;
     }
 }
 
