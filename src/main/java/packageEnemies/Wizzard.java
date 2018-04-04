@@ -11,7 +11,7 @@ public class Wizzard extends CharactersEnemies {
 
     public String getAttackLevel() {
         return attackLevel;
-    }
+    } 
 
     public void setAttackLevel(String attackLevel) {
         this.attackLevel = attackLevel;
