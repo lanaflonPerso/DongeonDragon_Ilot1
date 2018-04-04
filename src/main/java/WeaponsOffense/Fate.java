@@ -1,38 +1,39 @@
 package WeaponsOffense;
 
 public class Fate extends WeaponsOffense{
-	private int nBonusAttackSorcier;
-	private int nBonusAttackDragon;
 
+	private String bonusAttackSorcier;
+	private String bonusAttackDragon;
 	
-	public Fate(String sName, int nBonusAttackAllEnemy, int nBonusAttackSorcier, int nBonusAttackDragon){
-		super(sName, nBonusAttackAllEnemy);
-		this.nBonusAttackSorcier=nBonusAttackSorcier;
-		this.nBonusAttackDragon = nBonusAttackDragon;
+	public Fate(String pName, String pBonusAttackAllEnemy, String pBonusAttackSorcier, String pBonusAttackDragon){
+		super(pName, pBonusAttackAllEnemy);
+		bonusAttackSorcier = pBonusAttackSorcier;
+		bonusAttackDragon = pBonusAttackDragon;
 	}
-	
-	public void setBonusAttackSorcier(int nBonusAttackSorcier) {
-		this.nBonusAttackSorcier = nBonusAttackSorcier;
+
+	public String getBonusAttackSorcier() {
+		return bonusAttackSorcier;
 	}
-	
-	public void setBonusAttackDragon(int nBonusAttackDragon) {
-		this.nBonusAttackDragon = nBonusAttackDragon;
+
+	public void setBonusAttackSorcier(String bonusAttackSorcier) {
+		this.bonusAttackSorcier = bonusAttackSorcier;
 	}
-		
-	public int getBonusAttackSorcier() {
-		return nBonusAttackSorcier;
+
+	public String getBonusAttackDragon() {
+		return bonusAttackDragon;
 	}
-	
-	public int getBonusAttackDragon() {
-		return nBonusAttackDragon;
+
+	public void setBonusAttackDragon(String bonusAttackDragon) {
+		this.bonusAttackDragon = bonusAttackDragon;
 	}
-	
+
 	public String toString() {
 		return  super.toString() +
 				" ; Bonus d'attaque contre les Sorciers : " + getBonusAttackSorcier() +
-				" ; Bonus d'attaque contre les Dragons : " + getBonusAttackDragon(); 
+				" ; Bonus d'attaque contre les Dragons : " + getBonusAttackDragon();
 	}
 }
+
 
 
 
