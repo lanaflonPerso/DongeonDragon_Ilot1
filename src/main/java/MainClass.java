@@ -3,8 +3,10 @@ import packageCharacters.CharactersPlayer;
 import packageDefenseTools.DefenseTools;
 import packageEnemies.Dragon;
 import packageEnemies.Succube;
-import packageWeapons.Weapons;
+import WeaponsOffense.Weapons;
+import WeaponsOffense.Fate;
 import packageEnemies.Wizzard;
+
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -14,17 +16,19 @@ public class MainClass {
     private static Scanner sc;
 
     public static void main(String[] args) {
-
+ 
         sc = new Scanner(System.in);
-
+ 
 
         Dragon dragon = null;
         Wizzard wizzard = null;
         Succube succube = null; 
         Weapons weapons = null;
+        Fate fate = null;
 
         ArrayList<CharactersPlayer> charactersPlayersList = new ArrayList<CharactersPlayer>();
         ArrayList<Weapons> weaponsList = new ArrayList<Weapons>();
+        ArrayList<Fate> fateList = new ArrayList<Fate>();
         ArrayList<DefenseTools> defenseToolsList = new ArrayList<DefenseTools>();
         ArrayList<Dragon> dragonsList = new ArrayList<Dragon>();
         ArrayList<Succube> succubesList = new ArrayList<Succube>();
@@ -33,6 +37,10 @@ public class MainClass {
 
         System.out.println(MenuIntroduction.getDessinMenu());
 
+        fateList.add(new Fate("Eclair", 50, 25, 0));
+        fateList.add(new Fate("Invisibilite", 30, 30, 30));
+        fateList.add(new Fate("Mur de feu", 25, 25, 25));
+ 
         weaponsList.add(new Weapons("Arc", 50, 25, 0));
         weaponsList.add(new Weapons("Massue", 0, 0, 30));
         weaponsList.add(new Weapons("Epee", 0, 0, 25));
@@ -59,6 +67,7 @@ public class MainClass {
         displayWizzardList(wizzardsList);
         displaySuccubeList(succubesList);
         displayWeaponsList(weaponsList);
+        displayFateList(fateList);
 
     }
 
@@ -86,20 +95,10 @@ public class MainClass {
     		System.out.println(w.toString());
     	}
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    	
+    public static void displayFateList(ArrayList<Fate> fate) {
+    	for(Fate f : fate) {
+    		System.out.println(f.toString());
+    	}
+    }
 }
