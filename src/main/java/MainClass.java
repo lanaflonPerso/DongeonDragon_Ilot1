@@ -1,8 +1,11 @@
 
-import msgPourris.Msg;
+
+
+
+import packageMenuIntroduction.MenuIntroduction;
+import packageEnemies.CharactersEnemies;
 import packageCharacters.CharactersPlayer;
 import packageDefenseTools.DefenseTools;
-import packageEnemies.CharactersEnemies;
 import packageEnemies.Dragon;
 import packageEnemies.Succube;
 import packageWeapons.Weapons;
@@ -21,17 +24,12 @@ public class MainClass {
 
         sc = new Scanner(System.in);
 
-        ArrayList<CharactersPlayer> characters = new ArrayList();
-        ArrayList<Weapons> weapons = new ArrayList();
-        ArrayList<DefenseTools> defenseTools = new ArrayList();
-        ArrayList<CharactersEnemies> charactersEnemies = new ArrayList();
-
-
         Dragon dragon = null;
         Wizzard wizzard = null;
         Succube succube = null;
         Weapons weapons = null;
 
+        ArrayList<CharactersEnemies> charactersEnemies = new ArrayList();
         ArrayList<CharactersPlayer> charactersPlayersList = new ArrayList<CharactersPlayer>();
         ArrayList<Weapons> weaponsList = new ArrayList<Weapons>();
         ArrayList<DefenseTools> defenseToolsList = new ArrayList<DefenseTools>();
@@ -39,12 +37,13 @@ public class MainClass {
         ArrayList<Succube> succubesList = new ArrayList<Succube>();
         ArrayList<Wizzard> wizzardsList = new ArrayList<Wizzard>();
 
-        System.out.println(Msg.getMyMsgPourri());
-        System.out.println("_________________________________________________________________________________________________\n" + "|                                                                                               |\n" + "|                                                                                               |\n" + "| ,--.                                                 |    ,--.                                |\n" + "| |   |,---.,---.,---.,---.,---.,---.    ,---.,---.,---|    |   |,---.,---.,---.,---.,---.,---. |\n" + "| |   ||   ||   ||   ||---'|   ||   |    ,---||   ||   |    |   ||    ,---||   ||   ||   |`---. |\n" + "| `--' `---'`   '`---|`---'`---'`   '    `---^`   '`---'    `--' `    `---^`---|`---'`   '`---' |\n" + "|               `---'                                                     `---'                 |\n" + "|                                                                                               |\n" + "|                                                                                               |\n" + "|  /'                                                                                           |\n" + "|  ||                                                                                           |\n" + "|  ||      ** *                                                                                 |\n" + "|  ||      __X_                                                                                 |\n" + "|  ||     ( ___\\                        .     _///_,                                            |\n" + "|  ||     |:  \\\\                      .      / ` ' '>                                           |\n" + "| ><><  ___)..:/_#__,                   )   o'  __/_'>                                          |\n" + "| (X|) (|+(____)+\\ _)                  (   /  _/  )_\\'>                                         |\n" + "|  o|_\\/>> + + + << \\                   ' \"__/   /_/\\_>                                         |\n" + "|     |:\\/|+ + + +| \\_\\<                   ____/_/_/_/                                          |\n" + "|     \\./  XXXXXX.  (o_)_                 /,---, _/ /                                           |\n" + "|        /+ + + |   \\:|                  \"\"  /_/_/_/                                            |\n" + "|       /+ +/+ +|  -/->>>----.              /_(_(_(_                 \\                          |\n" + "|      /+ +|+ /XX /   _--,  _ \\            (   \\_\\_\\\\_               )\\                         |\n" + "|    \\+ + + /  |X   (,\\- \\/_ ,              \\'__\\_\\_\\_\\__            ).\\                        |\n" + "|     /\\+ + /\\  |X \\    /,//_/              //____|___\\__)           )_/                        |\n" + "|    +_+_+_( )o_)X  \\  (( ///               |  _  \\'___'_(           /'                         |\n" + "|     (_o(  /__/ X   \\  \\\\//                \\_ (-'\\'___'_\\      __,'_'                          |\n" + "|      \\_|  |_/  X    \\ ///                 __) \\  \\\\___(_   __/.__,'                           |\n" + "|      \\_| >(_/        \\,/               ,((,-,__\\  '\", __\\_/. __,'                             |\n" + "| ,////__o\\ /__////,    V                           '\"./_._._-'                                 |\n" + "|_______________________________________________________________________________________________|");
 
 
         boolean restInGame = true;
         while (restInGame) {
+            System.out.println(MenuIntroduction.getDessinMenu());
+            System.out.println("_________________________________________________________________________________________________\n" + "|                                                                                               |\n" + "|                                                                                               |\n" + "| ,--.                                                 |    ,--.                                |\n" + "| |   |,---.,---.,---.,---.,---.,---.    ,---.,---.,---|    |   |,---.,---.,---.,---.,---.,---. |\n" + "| |   ||   ||   ||   ||---'|   ||   |    ,---||   ||   |    |   ||    ,---||   ||   ||   |`---. |\n" + "| `--' `---'`   '`---|`---'`---'`   '    `---^`   '`---'    `--' `    `---^`---|`---'`   '`---' |\n" + "|               `---'                                                     `---'                 |\n" + "|                                                                                               |\n" + "|                                                                                               |\n" + "|  /'                                                                                           |\n" + "|  ||                                                                                           |\n" + "|  ||      ** *                                                                                 |\n" + "|  ||      __X_                                                                                 |\n" + "|  ||     ( ___\\                        .     _///_,                                            |\n" + "|  ||     |:  \\\\                      .      / ` ' '>                                           |\n" + "| ><><  ___)..:/_#__,                   )   o'  __/_'>                                          |\n" + "| (X|) (|+(____)+\\ _)                  (   /  _/  )_\\'>                                         |\n" + "|  o|_\\/>> + + + << \\                   ' \"__/   /_/\\_>                                         |\n" + "|     |:\\/|+ + + +| \\_\\<                   ____/_/_/_/                                          |\n" + "|     \\./  XXXXXX.  (o_)_                 /,---, _/ /                                           |\n" + "|        /+ + + |   \\:|                  \"\"  /_/_/_/                                            |\n" + "|       /+ +/+ +|  -/->>>----.              /_(_(_(_                 \\                          |\n" + "|      /+ +|+ /XX /   _--,  _ \\            (   \\_\\_\\\\_               )\\                         |\n" + "|    \\+ + + /  |X   (,\\- \\/_ ,              \\'__\\_\\_\\_\\__            ).\\                        |\n" + "|     /\\+ + /\\  |X \\    /,//_/              //____|___\\__)           )_/                        |\n" + "|    +_+_+_( )o_)X  \\  (( ///               |  _  \\'___'_(           /'                         |\n" + "|     (_o(  /__/ X   \\  \\\\//                \\_ (-'\\'___'_\\      __,'_'                          |\n" + "|      \\_|  |_/  X    \\ ///                 __) \\  \\\\___(_   __/.__,'                           |\n" + "|      \\_| >(_/        \\,/               ,((,-,__\\  '\", __\\_/. __,'                             |\n" + "| ,////__o\\ /__////,    V                           '\"./_._._-'                                 |\n" + "|_______________________________________________________________________________________________|");
+
             System.out.println("Que voulez vous faire :\n\t1-Jouer\n\t2-Quitter");
             String startGame = sc.nextLine();
             if (startGame.equals("1")) {
@@ -54,15 +53,25 @@ public class MainClass {
                 System.out.println(playeOneName);
                 System.out.println("<----------------------->");
                 boolean lanceDe = true;
+
                 while (lanceDe) {
                     System.out.println("Que voulez vous faire :\n\t1-Lancer le Dé\n\t2-Sortir\n\t3-Quitter le jeu");
                     String choixDeSix = sc.nextLine();
                     if (choixDeSix.equals("1")) {
                         deSix();
+//                        restInGame = false;
+
                     } else if (choixDeSix.equals("2")) {
                         lanceDe = false;
-                    } else {
+
+
+                    }else if (choixDeSix.equals("3")) {
+                        lanceDe = false;
+                        restInGame = false;
+                    }else
+                     {
                         System.out.println("3 choix seulement : 1,2 ou,3");
+
                     }
 
                 }
@@ -72,10 +81,15 @@ public class MainClass {
                 restInGame = false;
             } else {
                 System.out.println("2 choix seulement : 1 ou 2");
+
             }
 
 
         }
+
+
+//        System.out.println(MenuIntroduction.getDessinMenu());
+
 
         weaponsList.add(new Weapons("Arc", 50, 25, 0));
         weaponsList.add(new Weapons("Massue", 0, 0, 30));
@@ -97,6 +111,7 @@ public class MainClass {
         succubesList.add(new Succube("succube fascinante", "image", "60", "25"));
         succubesList.add(new Succube("succube seduisante", "image", "80", "50"));
         succubesList.add(new Succube("succube maitresse", "image", "120", "75"));
+
 
 
         displayDragonsList(dragonsList);

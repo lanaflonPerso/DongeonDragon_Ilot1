@@ -2,7 +2,7 @@ package packageEnemies;
 
 public class Wizzard extends CharactersEnemies {
 
-    protected String attackLevel;
+    private String attackLevel;
 
     public Wizzard(String pName, String pImage, String pLife, String pAttackLevel) {
         super(pName,pImage,pLife);
@@ -19,6 +19,6 @@ public class Wizzard extends CharactersEnemies {
 
     @Override
     public String toString() {
-        return super.toString() + "level d'attaque" + getAttackLevel();
+        return super.toString() + " level d'attaque : " + getAttackLevel();
     }
 }
