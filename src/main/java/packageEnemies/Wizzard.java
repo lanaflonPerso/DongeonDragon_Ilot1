@@ -22,3 +22,4 @@ public class Wizzard extends CharactersEnemies {
         return super.toString() + " level d'attaque : " + getAttackLevel();
     }
 }
+ 
