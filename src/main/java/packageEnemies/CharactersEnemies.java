@@ -2,9 +2,9 @@ package packageEnemies;
 
 public abstract class CharactersEnemies {
 
-    protected String name;
-    protected String image;
-    protected String life;
+    private String name;
+    private String image;
+    private String life;
 
     public CharactersEnemies(String pName, String pImage, String pLife){
         name = pName;

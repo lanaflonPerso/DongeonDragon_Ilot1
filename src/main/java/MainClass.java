@@ -1,7 +1,6 @@
-import msgPourris.Msg;
+import packageMenuIntroduction.MenuIntroduction;
 import packageCharacters.CharactersPlayer;
 import packageDefenseTools.DefenseTools;
-import packageEnemies.CharactersEnemies;
 import packageEnemies.Dragon;
 import packageEnemies.Succube;
 import WeaponsOffense.Weapons;
@@ -17,8 +16,9 @@ public class MainClass {
     private static Scanner sc;
 
     public static void main(String[] args) {
-
+ 
         sc = new Scanner(System.in);
+ 
 
         Dragon dragon = null;
         Wizzard wizzard = null;
@@ -34,7 +34,8 @@ public class MainClass {
         ArrayList<Succube> succubesList = new ArrayList<Succube>();
         ArrayList<Wizzard> wizzardsList = new ArrayList<Wizzard>();
 
-        System.out.println(Msg.getMyMsgPourri());
+
+        System.out.println(MenuIntroduction.getDessinMenu());
 
         fateList.add(new Fate("Eclair", 50, 25, 0));
         fateList.add(new Fate("Invisibilite", 30, 30, 30));
@@ -61,7 +62,7 @@ public class MainClass {
         succubesList.add(new Succube("succube seduisante","image","80","50"));
         succubesList.add(new Succube("succube maitresse","image","120","75"));
 
-        
+
         displayDragonsList(dragonsList);
         displayWizzardList(wizzardsList);
         displaySuccubeList(succubesList);
@@ -70,7 +71,6 @@ public class MainClass {
 
     }
 
-    
 
     public static void displayDragonsList(ArrayList<Dragon> dragon) {
         for (Dragon d : dragon) {
