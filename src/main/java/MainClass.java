@@ -12,6 +12,9 @@ import packageMenuIntroduction.MenuIntroduction;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+import packageDefenseTools.Filters;
+import packageDefenseTools.Shields;
+
 
 public class MainClass {
     private static Scanner sc;
