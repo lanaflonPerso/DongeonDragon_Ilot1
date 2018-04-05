@@ -152,6 +152,7 @@ public class MainClass {
                 if (plateauJeu[plateau] < 61) {
                     System.out.println("<---------------------------------->");
                     System.out.println("Lancé le Dé en Appuyant sur entée");
+                    System.out.println("<---------------------------------->");
                     String lanceDe = sc.nextLine();
                     System.out.println("<---------------------------------->");
                     plateau += deSix();
@@ -161,6 +162,7 @@ public class MainClass {
                 } else {
                     System.out.println("<---------------------------------->");
                     System.out.println("Lancé le Dé en Appuyant sur entée");
+                    System.out.println("<---------------------------------->");
                     String lanceDe = sc.nextLine();
                     System.out.println("<---------------------------------->");
                     plateau += deSix();
