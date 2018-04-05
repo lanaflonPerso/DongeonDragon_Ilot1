@@ -28,7 +28,9 @@ public class MainClass {
         Succube succube = null;
         Weapons weapons = null;
         Fate fate = null;
-
+       
+        
+        
         ArrayList<CharactersEnemies> charactersEnemies = new ArrayList();
         ArrayList<CharactersPlayer> charactersPlayersList = new ArrayList<CharactersPlayer>();
         ArrayList<Weapons> weaponsList = new ArrayList<Weapons>();
@@ -100,9 +102,11 @@ public class MainClass {
         succubesList.add(new Succube("succube fascinante", "image", "60", "25"));
         succubesList.add(new Succube("succube seduisante", "image", "80", "50"));
         succubesList.add(new Succube("succube maitresse", "image", "120", "75"));
+        
+        charactersPlayersList.add(new Warrior("jojo", "img" , "100", "100", new Weapons("Excaliburne", "100", "60" ,"60"), new Shields("Boukavlier", "5")));
 
-        displayList(succubesList);
-        displayList(dragonsList);
+        displayList(charactersPlayersList);
+       // displayList(dragonsList);
     }
 
     ///////////////////////////////////////_________________Méthode_______________//////////////////////////////

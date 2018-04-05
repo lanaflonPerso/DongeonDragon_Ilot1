@@ -9,4 +9,10 @@ public class Magician extends CharactersPlayer{
 		super (pName, pImage, pLife, pAttack, pFate, pFilter);
 		
 	}
+
+	@Override
+	public String toString() {
+		return "Magician []";
+	}
+	
 }

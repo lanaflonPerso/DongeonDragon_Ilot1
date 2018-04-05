@@ -12,13 +12,13 @@ public abstract class CharactersPlayer {
     protected String image;
     protected String Attack;
     
-    public CharactersPlayer(String pName ,String pImage ,String pLife ,String pAttack, WeaponsOffense pWeaponOffense) {
+    public CharactersPlayer(String pName ,String pImage ,String pLife ,String pAttack, WeaponsOffense pWeaponOffense, DefenseTools pDefenseTools) {
     	this.name = pName;
     	this.life = pLife;
     	this.image = pImage;
     	this.Attack = pAttack;
     	this.weaponOffense = pWeaponOffense;
-    	// this.defenseTools = pDefenseTools;
+    	this.defenseTools = pDefenseTools;
     }
     
 	protected String getName() {
@@ -65,6 +65,12 @@ public abstract class CharactersPlayer {
 
 	protected void setAttack(String attack) {
 		Attack = attack;
+	}
+
+	@Override
+	public String toString() {
+		return "CharactersPlayer [weaponOffense=" + weaponOffense + "\n defenseTools=" + defenseTools + ", name=" + name
+				+ ", life=" + life + ", image=" + image + ", Attack=" + Attack + "]";
 	}
 
         
