@@ -7,12 +7,14 @@ import packageEnemies.Dragon;
 import packageEnemies.Succube;
 import packageEnemies.Wizzard;
 import packageMenuIntroduction.MenuIntroduction;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class MainClass {
     private static Scanner sc;
+
     public static void main(String[] args) {
         sc = new Scanner(System.in);
 
@@ -48,24 +50,24 @@ public class MainClass {
                     System.out.println("Que voulez vous faire :\n\t1-Commencer une Partie\n\t2-Sortir\n\t3-Quitter le jeu");
                     String choixDeSix = sc.nextLine();
                     if (choixDeSix.equals("1")) {
-//                        deSix();
                         plateauDeJeu();
-
                     } else if (choixDeSix.equals("2")) {
                         lanceDe = false;
-
                     } else if (choixDeSix.equals("3")) {
                         lanceDe = false;
                         restInGame = false;
                     } else {
+                        System.out.println("<---------------------------------->");
                         System.out.println("3 choix seulement : 1,2 ou,3");
+                        System.out.println("<---------------------------------->");
                     }
                 }
-
             } else if (startGame.equals("2")) {
                 restInGame = false;
             } else {
+                System.out.println("<---------------------------------->");
                 System.out.println("2 choix seulement : 1 ou 2");
+                System.out.println("<---------------------------------->");
             }
         }
 
@@ -129,10 +131,9 @@ public class MainClass {
 
     public static int deSix() {
         Random deSix = new Random();
-       int resultatDeSix= deSix.nextInt(6) + 1;
-        System.out.println("Résultat de votre Lancé : " + resultatDeSix );
+        int resultatDeSix = deSix.nextInt(6) + 1;
+        System.out.println("Résultat de votre Lancé : " + resultatDeSix);
         return resultatDeSix;
-
     }
 
     public static void displayFateList(ArrayList<Fate> fate) {
@@ -140,26 +141,36 @@ public class MainClass {
             System.out.println(f.toString());
         }
     }
-    private static void  plateauDeJeu(){
 
-       boolean bouDuChemin= true;
-        int plateau=0;
-       int result;
-      while(bouDuChemin) {
-        if (plateau < 64){
-            System.out.println("Lancé le Dé en Appuyant sur entée");
-            String lanceDe = sc.nextLine();
-            plateau += deSix();
-            System.out.println("Votre position sur le plateau :" + plateau);
-//        }else if(plateau>64){
-//            System.out.println("Vous étes au bout du chemin");
-//            bouDuChemin=false;
-      }else {
-            System.out.println("Vous étes au bout du chemin");
-            bouDuChemin=false;
+    private static void plateauDeJeu() {
 
+        boolean bouDuChemin = true;
+        int plateauJeu[] = new int[64];
+        int plateau = 0;
+        while (bouDuChemin) {
+            try {
+                if (plateauJeu[plateau] < 61) {
+                    System.out.println("<---------------------------------->");
+                    System.out.println("Lancé le Dé en Appuyant sur entée");
+                    String lanceDe = sc.nextLine();
+                    System.out.println("<---------------------------------->");
+                    plateau += deSix();
+                    System.out.println("Votre position sur le plateau :" + plateau);
+                    plateauJeu[plateau] = plateau;
+
+                } else {
+                    System.out.println("<---------------------------------->");
+                    System.out.println("Lancé le Dé en Appuyant sur entée");
+                    String lanceDe = sc.nextLine();
+                    System.out.println("<---------------------------------->");
+                    plateau += deSix();
+                    plateauJeu[plateau] = plateau;
+                }
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("////////////////////////////////////////////////////////////////////////////" + "\n/////////////////////Vous étes au bout du chemin////////////////////////////" + "\n////////////////////////////////////////////////////////////////////////////");
+                bouDuChemin = false;
+            }
         }
-    }
     }
 }
 
