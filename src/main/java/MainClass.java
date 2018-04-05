@@ -3,6 +3,8 @@ import WeaponsOffense.Weapons;
 import packageCharacters.CharactersPlayer;
 import packageDefenseTools.DefenseTools;
 import packageEnemies.CharactersEnemies;
+import packageCharacters.Magician;
+import packageCharacters.Warrior;
 import packageEnemies.Dragon;
 import packageEnemies.Succube;
 import packageEnemies.Wizzard;
@@ -94,38 +96,16 @@ public class MainClass {
         succubesList.add(new Succube("succube seduisante", "image", "80", "50"));
         succubesList.add(new Succube("succube maitresse", "image", "120", "75"));
 
-        displayDragonsList(dragonsList);
-        displayWizzardList(wizzardsList);
-        displaySuccubeList(succubesList);
-        displayWeaponsList(weaponsList);
-        displayFateList(fateList);
+        displayList(succubesList);
+        displayList(dragonsList);
     }
 
     ///////////////////////////////////////_________________Méthode_______________//////////////////////////////
-
-    public static void displayDragonsList(ArrayList<Dragon> dragon) {
-        for (Dragon d : dragon) {
-            System.out.println(d.toString());
-        }
+    
+    public static void displayList(ArrayList <? extends Object > listElements){
+    	listElements.forEach(l -> System.out.println(l.toString()));
     }
 
-    public static void displayWizzardList(ArrayList<Wizzard> wizzard) {
-        for (Wizzard w : wizzard) {
-            System.out.println(w.toString());
-        }
-    }
-
-    public static void displaySuccubeList(ArrayList<Succube> succube) {
-        for (Succube s : succube) {
-            System.out.println(s.toString());
-        }
-    }
-
-    public static void displayWeaponsList(ArrayList<Weapons> weapons) {
-        for (Weapons w : weapons) {
-            System.out.println(w.toString());
-        }
-    }
 
     public static int deSix() {
         Random deSix = new Random();
@@ -135,11 +115,6 @@ public class MainClass {
 
     }
 
-    public static void displayFateList(ArrayList<Fate> fate) {
-        for (Fate f : fate) {
-            System.out.println(f.toString());
-        }
-    }
     private static void  plateauDeJeu(){
 
        boolean bouDuChemin= true;
