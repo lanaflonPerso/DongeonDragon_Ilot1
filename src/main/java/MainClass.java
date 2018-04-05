@@ -3,6 +3,8 @@ import WeaponsOffense.Weapons;
 import packageCharacters.CharactersPlayer;
 import packageDefenseTools.DefenseTools;
 import packageEnemies.CharactersEnemies;
+import packageCharacters.Magician;
+import packageCharacters.Warrior;
 import packageEnemies.Dragon;
 import packageEnemies.Succube;
 import packageEnemies.Wizzard;
@@ -11,6 +13,9 @@ import packageMenuIntroduction.MenuIntroduction;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+import packageDefenseTools.Filters;
+import packageDefenseTools.Shields;
+
 
 public class MainClass {
     private static Scanner sc;
@@ -96,38 +101,16 @@ public class MainClass {
         succubesList.add(new Succube("succube seduisante", "image", "80", "50"));
         succubesList.add(new Succube("succube maitresse", "image", "120", "75"));
 
-        displayDragonsList(dragonsList);
-        displayWizzardList(wizzardsList);
-        displaySuccubeList(succubesList);
-        displayWeaponsList(weaponsList);
-        displayFateList(fateList);
+        displayList(succubesList);
+        displayList(dragonsList);
     }
 
     ///////////////////////////////////////_________________Méthode_______________//////////////////////////////
 
-    public static void displayDragonsList(ArrayList<Dragon> dragon) {
-        for (Dragon d : dragon) {
-            System.out.println(d.toString());
-        }
+    public static void displayList(ArrayList<? extends Object> listElements) {
+        listElements.forEach(l -> System.out.println(l.toString()));
     }
 
-    public static void displayWizzardList(ArrayList<Wizzard> wizzard) {
-        for (Wizzard w : wizzard) {
-            System.out.println(w.toString());
-        }
-    }
-
-    public static void displaySuccubeList(ArrayList<Succube> succube) {
-        for (Succube s : succube) {
-            System.out.println(s.toString());
-        }
-    }
-
-    public static void displayWeaponsList(ArrayList<Weapons> weapons) {
-        for (Weapons w : weapons) {
-            System.out.println(w.toString());
-        }
-    }
 
     public static int deSix() {
         Random deSix = new Random();
@@ -135,46 +118,39 @@ public class MainClass {
         System.out.println("Résultat de votre Lancé : " + resultatDeSix);
         return resultatDeSix;
     }
+            private static void plateauDeJeu () {
 
-    public static void displayFateList(ArrayList<Fate> fate) {
-        for (Fate f : fate) {
-            System.out.println(f.toString());
-        }
-    }
+            boolean bouDuChemin = true;
+            int plateauJeu[] = new int[64];
+            int plateau = 0;
+            while (bouDuChemin) {
+                try {
+                    if (plateauJeu[plateau] < 61) {
+                        System.out.println("<---------------------------------->");
+                        System.out.println("Lancé le Dé en Appuyant sur entée");
+                        System.out.println("<---------------------------------->");
+                        String lanceDe = sc.nextLine();
+                        System.out.println("<---------------------------------->");
+                        plateau += deSix();
+                        System.out.println("Votre position sur le plateau :" + plateau);
+                        plateauJeu[plateau] = plateau;
 
-    private static void plateauDeJeu() {
-
-        boolean bouDuChemin = true;
-        int plateauJeu[] = new int[64];
-        int plateau = 0;
-        while (bouDuChemin) {
-            try {
-                if (plateauJeu[plateau] < 61) {
-                    System.out.println("<---------------------------------->");
-                    System.out.println("Lancé le Dé en Appuyant sur entée");
-                    System.out.println("<---------------------------------->");
-                    String lanceDe = sc.nextLine();
-                    System.out.println("<---------------------------------->");
-                    plateau += deSix();
-                    System.out.println("Votre position sur le plateau :" + plateau);
-                    plateauJeu[plateau] = plateau;
-
-                } else {
-                    System.out.println("<---------------------------------->");
-                    System.out.println("Lancé le Dé en Appuyant sur entée");
-                    System.out.println("<---------------------------------->");
-                    String lanceDe = sc.nextLine();
-                    System.out.println("<---------------------------------->");
-                    plateau += deSix();
-                    plateauJeu[plateau] = plateau;
+                    } else {
+                        System.out.println("<---------------------------------->");
+                        System.out.println("Lancé le Dé en Appuyant sur entée");
+                        System.out.println("<---------------------------------->");
+                        String lanceDe = sc.nextLine();
+                        System.out.println("<---------------------------------->");
+                        plateau += deSix();
+                        plateauJeu[plateau] = plateau;
+                    }
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    System.out.println("////////////////////////////////////////////////////////////////////////////" + "\n/////////////////////Vous étes au bout du chemin////////////////////////////" + "\n////////////////////////////////////////////////////////////////////////////");
+                    bouDuChemin = false;
                 }
-            } catch (ArrayIndexOutOfBoundsException e) {
-                System.out.println("////////////////////////////////////////////////////////////////////////////" + "\n/////////////////////Vous étes au bout du chemin////////////////////////////" + "\n////////////////////////////////////////////////////////////////////////////");
-                bouDuChemin = false;
             }
         }
     }
-}
 
 
 
