@@ -9,7 +9,7 @@ import packageEnemies.Dragon;
 import packageEnemies.Succube;
 import packageEnemies.Wizzard;
 import packageMenuIntroduction.MenuIntroduction;
-
+import packageInGame.LanceDeDe;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -57,13 +57,18 @@ public class MainClass {
                     System.out.println("Que voulez vous faire :\n\t1-Commencer une Partie\n\t2-Sortir\n\t3-Quitter le jeu");
                     String choixDeSix = sc.nextLine();
                     if (choixDeSix.equals("1")) {
-                        plateauDeJeu();
+                        LanceDeDe.plateauDeJeu();
                     } else if (choixDeSix.equals("2")) {
                         lanceDe = false;
                     } else if (choixDeSix.equals("3")) {
                         lanceDe = false;
                         restInGame = false;
                     } else {
+
+
+
+
+
                         System.out.println("<---------------------------------->");
                         System.out.println("3 choix seulement : 1,2 ou,3");
                         System.out.println("<---------------------------------->");
@@ -114,47 +119,7 @@ public class MainClass {
     public static void displayList(ArrayList<? extends Object> listElements) {
         listElements.forEach(l -> System.out.println(l.toString()));
     }
-
-
-    public static int deSix() {
-        Random deSix = new Random();
-        int resultatDeSix = deSix.nextInt(6) + 1;
-        System.out.println("Résultat de votre Lancé : " + resultatDeSix);
-        return resultatDeSix;
-    }
-            private static void plateauDeJeu () {
-
-            boolean bouDuChemin = true;
-            int plateauJeu[] = new int[64];
-            int plateau = 0;
-            while (bouDuChemin) {
-                try {
-                    if (plateauJeu[plateau] < 61) {
-                        System.out.println("<---------------------------------->");
-                        System.out.println("Lancé le Dé en Appuyant sur entée");
-                        System.out.println("<---------------------------------->");
-                        String lanceDe = sc.nextLine();
-                        System.out.println("<---------------------------------->");
-                        plateau += deSix();
-                        System.out.println("Votre position sur le plateau :" + plateau);
-                        plateauJeu[plateau] = plateau;
-
-                    } else {
-                        System.out.println("<---------------------------------->");
-                        System.out.println("Lancé le Dé en Appuyant sur entée");
-                        System.out.println("<---------------------------------->");
-                        String lanceDe = sc.nextLine();
-                        System.out.println("<---------------------------------->");
-                        plateau += deSix();
-                        plateauJeu[plateau] = plateau;
-                    }
-                } catch (ArrayIndexOutOfBoundsException e) {
-                    System.out.println("////////////////////////////////////////////////////////////////////////////" + "\n/////////////////////Vous étes au bout du chemin////////////////////////////" + "\n////////////////////////////////////////////////////////////////////////////");
-                    bouDuChemin = false;
-                }
-            }
-        }
-    }
+}
 
 
 
