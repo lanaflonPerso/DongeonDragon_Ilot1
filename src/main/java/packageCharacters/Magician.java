@@ -12,7 +12,7 @@ public class Magician extends CharactersPlayer{
 
 	@Override
 	public String toString() {
-		return "Magician []";
+		return super.toString();
 	}
 	
 }
