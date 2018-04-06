@@ -3,10 +3,13 @@ import packageCharacters.*;
 import packageDefenseTools.*;
 import packageEnemies.*;
 import packageMenuIntroduction.MenuIntroduction;
-
+import packageInGame.LanceDeDe;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+import packageDefenseTools.Filters;
+import packageDefenseTools.Shields;
+
 
 
 public class MainClass {
@@ -18,11 +21,11 @@ public class MainClass {
         Dragon dragon = null;
         Wizzard wizzard = null;
         Succube succube = null;
-        
-        
-        ArrayList<CharactersEnemies> charactersEnemies = new ArrayList<CharactersEnemies>();
-        ArrayList<CharactersPlayer> charactersPlayersList = new ArrayList<CharactersPlayer>();
+
         ArrayList<WeaponsOffense> weaponsOffenseList = new ArrayList<WeaponsOffense>();
+        ArrayList<CharactersEnemies> charactersEnemies = new ArrayList();
+        ArrayList<CharactersPlayer> charactersWarriorList = new ArrayList<CharactersPlayer>();
+        ArrayList<CharactersPlayer> charactersMagicianList = new ArrayList<CharactersPlayer>();
         ArrayList<DefenseTools> defenseToolsList = new ArrayList<DefenseTools>();
         ArrayList<Dragon> dragonsList = new ArrayList<Dragon>();
         ArrayList<Succube> succubesList = new ArrayList<Succube>();
@@ -39,13 +42,32 @@ public class MainClass {
                 System.out.println("<----------------------->");
                 System.out.println(playeOneName);
                 System.out.println("<----------------------->");
-                boolean lanceDe = true;
+                boolean choixDePerso = true;
+                while (choixDePerso) {
+                    System.out.println("Que voulez vous être :\n\t1-Guerrier\n\t2-Magicien :  ");
+                    String choixPerso = sc.nextLine();
+                    if (choixPerso.equals("1")) {
+                        charactersWarriorList.add(new Warrior("jojo", "img", "100", "100", new Weapons("Excaliburne", "100", "60", "60"), new Shields("Boukavlier", "5")));
+                        displayList(charactersWarriorList);
+                        choixDePerso = false;
+                    } else if (choixPerso.equals("2")) {
+                        charactersMagicianList.add(new Magician("Merlin", "img2","100", "100", new Fate("Fire Ball","100","60","60"),new Filters("Invisibilité","5")));
+                        displayList(charactersMagicianList);
+                        choixDePerso = false;
 
+                    } else {
+                        System.out.println("<----------------------------------------->");
+                        System.out.println("Deux choix possible : 1-Guerrier 2-Magicien");
+                        System.out.println("<----------------------------------------->");
+                    }
+                }
+
+                boolean lanceDe = true;
                 while (lanceDe) {
                     System.out.println("Que voulez vous faire :\n\t1-Commencer une Partie\n\t2-Sortir\n\t3-Quitter le jeu");
                     String choixDeSix = sc.nextLine();
                     if (choixDeSix.equals("1")) {
-                        plateauDeJeu();
+                        LanceDeDe.plateauDeJeu();
                     } else if (choixDeSix.equals("2")) {
                         lanceDe = false;
                     } else if (choixDeSix.equals("3")) {
@@ -57,6 +79,7 @@ public class MainClass {
                         System.out.println("<---------------------------------->");
                     }
                 }
+
             } else if (startGame.equals("2")) {
                 restInGame = false;
             } else {
@@ -83,10 +106,7 @@ public class MainClass {
         succubesList.add(new Succube("succube fascinante", "image", "60", "25"));
         succubesList.add(new Succube("succube seduisante", "image", "80", "50"));
         succubesList.add(new Succube("succube maitresse", "image", "120", "75"));
-        
-       
-        displayList(charactersPlayersList);
-       // displayList(dragonsList);
+      
     }
 
     ///////////////////////////////////////_________________Méthode_______________//////////////////////////////
@@ -94,7 +114,6 @@ public class MainClass {
     public static void displayList(ArrayList<? extends Object> listElements) {
         listElements.forEach(l -> System.out.println(l.toString()));
     }
-
 
     public static int deSix() {
         Random deSix = new Random();
@@ -135,6 +154,8 @@ public class MainClass {
             }
         }
     }
+
+
 
 
 
