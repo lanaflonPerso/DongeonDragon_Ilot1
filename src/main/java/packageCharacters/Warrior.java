@@ -1,5 +1,5 @@
 package packageCharacters;
-import WeaponsOffense.WeaponsOffense;
+import WeaponsOffense.*;
 import packageDefenseTools.Shields;
 
 public class Warrior extends CharactersPlayer{

@@ -1,23 +1,17 @@
-import WeaponsOffense.Fate;
-import WeaponsOffense.Weapons;
-import packageCharacters.CharactersPlayer;
-import packageDefenseTools.DefenseTools;
-import packageEnemies.CharactersEnemies;
-import packageCharacters.Magician;
-import packageCharacters.Warrior;
-import packageEnemies.Dragon;
-import packageEnemies.Succube;
-import packageEnemies.Wizzard;
+import WeaponsOffense.*;
+import packageCharacters.*;
+import packageDefenseTools.*;
+import packageEnemies.*;
 import packageMenuIntroduction.MenuIntroduction;
 import packageInGame.LanceDeDe;
 import packagePlayersNames.*;
-
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import java.util.Random;
 import packageDefenseTools.Filters;
 import packageDefenseTools.Shields;
+
 
 
 public class MainClass {
@@ -29,16 +23,12 @@ public class MainClass {
         Dragon dragon = null;
         Wizzard wizzard = null;
         Succube succube = null;
-        Weapons weapons = null;
-        Fate fate = null;
 
-
+        ArrayList<WeaponsOffense> weaponsOffenseList = new ArrayList<WeaponsOffense>();
         ArrayList<CharactersEnemies> charactersEnemies = new ArrayList();
         ArrayList<CharactersPlayer> charactersWarriorList = new ArrayList<CharactersPlayer>();
         ArrayList<CharactersPlayer> charactersMagicianList = new ArrayList<CharactersPlayer>();
         ArrayList<PlayersName> playersNameArrayList= new ArrayList<PlayersName>();
-        ArrayList<Weapons> weaponsList = new ArrayList<Weapons>();
-        ArrayList<Fate> fateList = new ArrayList<Fate>();
         ArrayList<DefenseTools> defenseToolsList = new ArrayList<DefenseTools>();
         ArrayList<Dragon> dragonsList = new ArrayList<Dragon>();
         ArrayList<Succube> succubesList = new ArrayList<Succube>();
@@ -64,13 +54,13 @@ public class MainClass {
                     System.out.println("Que voulez vous être :\n\t1-Guerrier\n\t2-Magicien :  ");
                     String choixPerso = sc.nextLine();
                     if (choixPerso.equals("1")) {
-                        charactersWarriorList.add(new Warrior("jojo", "img", "100", "100", new Weapons("Excaliburne", "100", "60", "60"), new Shields("Boukavlier", "5")));
-                        displayList(charactersWarriorList);
-                        choixDePerso = false;
+
+
+
                     } else if (choixPerso.equals("2")) {
-                        charactersMagicianList.add(new Magician("Merlin", "img2","100", "100", new Fate("Fire Ball","100","60","60"),new Filters("Invisibilité","5")));
-                        displayList(charactersMagicianList);
-                        choixDePerso = false;
+
+
+
 
                     } else {
                         System.out.println("<----------------------------------------->");
@@ -106,14 +96,7 @@ public class MainClass {
             }
         }
 
-        fateList.add(new Fate("Eclair", "50", "25", "0"));
-        fateList.add(new Fate("Invisibilite", "30", "30", "30"));
-        fateList.add(new Fate("Mur de feu", "25", "25", "25"));
-
-        weaponsList.add(new Weapons("Arc", "50", "25", "0"));
-        weaponsList.add(new Weapons("Massue", "0", "0", "30"));
-        weaponsList.add(new Weapons("Epee", "0", "0", "25"));
-
+        
         dragonsList.add(new Dragon("Dragon Brun", "image", "90", "15"));
         dragonsList.add(new Dragon("Dragon de sang", "image", "140", "20"));
         dragonsList.add(new Dragon("Dragon de glace", "image", "180", "30"));
@@ -130,11 +113,7 @@ public class MainClass {
         succubesList.add(new Succube("succube fascinante", "image", "60", "25"));
         succubesList.add(new Succube("succube seduisante", "image", "80", "50"));
         succubesList.add(new Succube("succube maitresse", "image", "120", "75"));
-
-//        charactersWarriorList.add(new Warrior("jojo", "img" , "100", "100", new Weapons("Excaliburne", "100", "60" ,"60"), new Shields("Boukavlier", "5")));
-
-//        displayList(charactersWarriorList);
-        // displayList(dragonsList);
+      
     }
 
     ///////////////////////////////////////_________________Méthode_______________//////////////////////////////
@@ -142,7 +121,11 @@ public class MainClass {
     public static void displayList(ArrayList<? extends Object> listElements) {
         listElements.forEach(l -> System.out.println(l.toString()));
     }
-}
+
+
+    }
+
+
 
 
 
