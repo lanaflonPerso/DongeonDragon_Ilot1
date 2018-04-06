@@ -1,20 +1,12 @@
-import WeaponsOffense.Fate;
-import WeaponsOffense.Weapons;
-import packageCharacters.CharactersPlayer;
-import packageDefenseTools.DefenseTools;
-import packageEnemies.CharactersEnemies;
-import packageCharacters.Magician;
-import packageCharacters.Warrior;
-import packageEnemies.Dragon;
-import packageEnemies.Succube;
-import packageEnemies.Wizzard;
+import WeaponsOffense.*;
+import packageCharacters.*;
+import packageDefenseTools.*;
+import packageEnemies.*;
 import packageMenuIntroduction.MenuIntroduction;
 
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
-import packageDefenseTools.Filters;
-import packageDefenseTools.Shields;
 
 
 public class MainClass {
@@ -26,15 +18,11 @@ public class MainClass {
         Dragon dragon = null;
         Wizzard wizzard = null;
         Succube succube = null;
-        Weapons weapons = null;
-        Fate fate = null;
-       
         
         
-        ArrayList<CharactersEnemies> charactersEnemies = new ArrayList();
+        ArrayList<CharactersEnemies> charactersEnemies = new ArrayList<CharactersEnemies>();
         ArrayList<CharactersPlayer> charactersPlayersList = new ArrayList<CharactersPlayer>();
-        ArrayList<Weapons> weaponsList = new ArrayList<Weapons>();
-        ArrayList<Fate> fateList = new ArrayList<Fate>();
+        ArrayList<WeaponsOffense> weaponsOffenseList = new ArrayList<WeaponsOffense>();
         ArrayList<DefenseTools> defenseToolsList = new ArrayList<DefenseTools>();
         ArrayList<Dragon> dragonsList = new ArrayList<Dragon>();
         ArrayList<Succube> succubesList = new ArrayList<Succube>();
@@ -78,14 +66,7 @@ public class MainClass {
             }
         }
 
-        fateList.add(new Fate("Eclair", "50", "25", "0"));
-        fateList.add(new Fate("Invisibilite", "30", "30", "30"));
-        fateList.add(new Fate("Mur de feu", "25", "25", "25"));
-
-        weaponsList.add(new Weapons("Arc", "50", "25", "0"));
-        weaponsList.add(new Weapons("Massue", "0", "0", "30"));
-        weaponsList.add(new Weapons("Epee", "0", "0", "25"));
-
+        
         dragonsList.add(new Dragon("Dragon Brun", "image", "90", "15"));
         dragonsList.add(new Dragon("Dragon de sang", "image", "140", "20"));
         dragonsList.add(new Dragon("Dragon de glace", "image", "180", "30"));
@@ -103,8 +84,7 @@ public class MainClass {
         succubesList.add(new Succube("succube seduisante", "image", "80", "50"));
         succubesList.add(new Succube("succube maitresse", "image", "120", "75"));
         
-        charactersPlayersList.add(new Warrior("jojo", "img" , "100", "100", new Weapons("Excaliburne", "100", "60" ,"60"), new Shields("Boukavlier", "5")));
-
+       
         displayList(charactersPlayersList);
        // displayList(dragonsList);
     }
@@ -129,7 +109,7 @@ public class MainClass {
             int plateau = 0;
             while (bouDuChemin) {
                 try {
-                    if (plateauJeu[plateau] < 61) {
+                    if (plateauJeu[plateau] < 64) {
                         System.out.println("<---------------------------------->");
                         System.out.println("Lancé le Dé en Appuyant sur entée");
                         System.out.println("<---------------------------------->");

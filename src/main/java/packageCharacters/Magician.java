@@ -1,12 +1,12 @@
 package packageCharacters;
-import WeaponsOffense.Fate;
+import WeaponsOffense.*;
 import packageDefenseTools.Filters;
 
 public class Magician extends CharactersPlayer{
 	
 
-	public Magician(String pName, String pImage, String pLife, String pAttack, Fate pFate, Filters pFilter ) {
-		super (pName, pImage, pLife, pAttack, pFate, pFilter);
+	public Magician(String pName, String pImage, String pLife, String pAttack, WeaponsOffense pWeaponsOffense, Filters pFilter ) {
+		super (pName, pImage, pLife, pAttack, pWeaponsOffense, pFilter);
 		
 	}
 
