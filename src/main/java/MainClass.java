@@ -62,7 +62,7 @@ public class MainClass {
                         displayList(charactersWarriorList);
                         choixDePerso = false;
                     } else if (choixPerso.equals("2")) {
-                        charactersMagicianList.add(new Warrior("jojo", "img", "100", "100", new Weapons("Excaliburne", "100", "60", "60"), new Shields("Boukavlier", "5")));
+                        charactersMagicianList.add(new Magician("Merlin", "img2","100", "100", new Fate("Fire Ball","100","60","60"),new Filters("Invisibilité","5")));
                         displayList(charactersMagicianList);
                         choixDePerso = false;
 
