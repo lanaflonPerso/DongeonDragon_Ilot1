@@ -10,9 +10,11 @@ import packageEnemies.Succube;
 import packageEnemies.Wizzard;
 import packageMenuIntroduction.MenuIntroduction;
 import packageInGame.LanceDeDe;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+
 import packageDefenseTools.Filters;
 import packageDefenseTools.Shields;
 
@@ -28,11 +30,11 @@ public class MainClass {
         Succube succube = null;
         Weapons weapons = null;
         Fate fate = null;
-       
-        
-        
+
+
         ArrayList<CharactersEnemies> charactersEnemies = new ArrayList();
-        ArrayList<CharactersPlayer> charactersPlayersList = new ArrayList<CharactersPlayer>();
+        ArrayList<CharactersPlayer> charactersWarriorList = new ArrayList<CharactersPlayer>();
+        ArrayList<CharactersPlayer> charactersMagicianList = new ArrayList<CharactersPlayer>();
         ArrayList<Weapons> weaponsList = new ArrayList<Weapons>();
         ArrayList<Fate> fateList = new ArrayList<Fate>();
         ArrayList<DefenseTools> defenseToolsList = new ArrayList<DefenseTools>();
@@ -51,8 +53,27 @@ public class MainClass {
                 System.out.println("<----------------------->");
                 System.out.println(playeOneName);
                 System.out.println("<----------------------->");
-                boolean lanceDe = true;
+                boolean choixDePerso = true;
+                while (choixDePerso) {
+                    System.out.println("Que voulez vous être :\n\t1-Guerrier\n\t2-Magicien :  ");
+                    String choixPerso = sc.nextLine();
+                    if (choixPerso.equals("1")) {
+                        charactersWarriorList.add(new Warrior("jojo", "img", "100", "100", new Weapons("Excaliburne", "100", "60", "60"), new Shields("Boukavlier", "5")));
+                        displayList(charactersWarriorList);
+                        choixDePerso = false;
+                    } else if (choixPerso.equals("2")) {
+                        charactersMagicianList.add(new Warrior("jojo", "img", "100", "100", new Weapons("Excaliburne", "100", "60", "60"), new Shields("Boukavlier", "5")));
+                        displayList(charactersMagicianList);
+                        choixDePerso = false;
 
+                    } else {
+                        System.out.println("<----------------------------------------->");
+                        System.out.println("Deux choix possible : 1-Guerrier 2-Magicien");
+                        System.out.println("<----------------------------------------->");
+                    }
+                }
+
+                boolean lanceDe = true;
                 while (lanceDe) {
                     System.out.println("Que voulez vous faire :\n\t1-Commencer une Partie\n\t2-Sortir\n\t3-Quitter le jeu");
                     String choixDeSix = sc.nextLine();
@@ -64,16 +85,12 @@ public class MainClass {
                         lanceDe = false;
                         restInGame = false;
                     } else {
-
-
-
-
-
                         System.out.println("<---------------------------------->");
                         System.out.println("3 choix seulement : 1,2 ou,3");
                         System.out.println("<---------------------------------->");
                     }
                 }
+
             } else if (startGame.equals("2")) {
                 restInGame = false;
             } else {
@@ -107,11 +124,11 @@ public class MainClass {
         succubesList.add(new Succube("succube fascinante", "image", "60", "25"));
         succubesList.add(new Succube("succube seduisante", "image", "80", "50"));
         succubesList.add(new Succube("succube maitresse", "image", "120", "75"));
-        
-        charactersPlayersList.add(new Warrior("jojo", "img" , "100", "100", new Weapons("Excaliburne", "100", "60" ,"60"), new Shields("Boukavlier", "5")));
 
-        displayList(charactersPlayersList);
-       // displayList(dragonsList);
+//        charactersWarriorList.add(new Warrior("jojo", "img" , "100", "100", new Weapons("Excaliburne", "100", "60" ,"60"), new Shields("Boukavlier", "5")));
+
+//        displayList(charactersWarriorList);
+        // displayList(dragonsList);
     }
 
     ///////////////////////////////////////_________________Méthode_______________//////////////////////////////
