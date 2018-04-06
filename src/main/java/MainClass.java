@@ -10,9 +10,10 @@ import packageEnemies.Succube;
 import packageEnemies.Wizzard;
 import packageMenuIntroduction.MenuIntroduction;
 import packageInGame.LanceDeDe;
+import packagePlayersNames.*;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.Scanner;
 
 import packageDefenseTools.Filters;
@@ -35,6 +36,7 @@ public class MainClass {
         ArrayList<CharactersEnemies> charactersEnemies = new ArrayList();
         ArrayList<CharactersPlayer> charactersWarriorList = new ArrayList<CharactersPlayer>();
         ArrayList<CharactersPlayer> charactersMagicianList = new ArrayList<CharactersPlayer>();
+        ArrayList<PlayersName> playersNameArrayList= new ArrayList<PlayersName>();
         ArrayList<Weapons> weaponsList = new ArrayList<Weapons>();
         ArrayList<Fate> fateList = new ArrayList<Fate>();
         ArrayList<DefenseTools> defenseToolsList = new ArrayList<DefenseTools>();
@@ -50,8 +52,12 @@ public class MainClass {
             if (startGame.equals("1")) {
                 System.out.println("Nom du Player One");
                 String playeOneName = sc.nextLine();
+
+                playersNameArrayList.add(new PlayersName(playeOneName));
+
                 System.out.println("<----------------------->");
-                System.out.println(playeOneName);
+//                System.out.println(playeOneName);
+                displayList( playersNameArrayList);
                 System.out.println("<----------------------->");
                 boolean choixDePerso = true;
                 while (choixDePerso) {
