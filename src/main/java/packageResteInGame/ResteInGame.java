@@ -29,13 +29,13 @@ public class  ResteInGame {
             System.out.println("<----------------------->");
             System.out.println(playeOneName);
             AllList.displayList(AllList.playerNameList(playeOneName));
-            AllList.displayList(AllList.dragonList());
-            AllList.displayList(AllList.succubeList());
-            AllList.displayList(AllList.wizzardList());
-            AllList.displayList(AllList.shieldList());
-            AllList.displayList(AllList.filterList());
-            AllList.displayList(AllList.sortList());
-            AllList.displayList(AllList.armeList());
+//            AllList.displayList(AllList.dragonList());
+//            AllList.displayList(AllList.succubeList());
+//            AllList.displayList(AllList.wizzardList());
+//            AllList.displayList(AllList.shieldList());
+//            AllList.displayList(AllList.filterList());
+//            AllList.displayList(AllList.sortList());
+//            AllList.displayList(AllList.armeList());
 
 
             System.out.println("<----------------------->");
@@ -44,11 +44,12 @@ public class  ResteInGame {
                 System.out.println("Que voulez vous être :\n\t1-Guerrier\n\t2-Magicien :  ");
                 String choixPerso = sc.nextLine();
                 if (choixPerso.equals("1")) {
-
+                    System.out.println("vous etes un Guerrier");
+                    choixDePerso = false;
 
                 } else if (choixPerso.equals("2")) {
-
-
+                    System.out.println("vous etes un Magicien");
+                    choixDePerso = false;
                 } else {
                     System.out.println("<----------------------------------------->");
                     System.out.println("Deux choix possible : 1-Guerrier 2-Magicien");
