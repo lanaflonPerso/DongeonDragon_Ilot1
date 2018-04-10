@@ -28,14 +28,14 @@ public class  ResteInGame {
             AllList.playerNameList(playeOneName);
             System.out.println("<----------------------->");
             System.out.println(playeOneName);
-            AllList.displayList(AllList.playerNameList(playeOneName));
-            AllList.displayList(AllList.dragonList());
-            AllList.displayList(AllList.succubeList());
-            AllList.displayList(AllList.wizzardList());
-            AllList.displayList(AllList.shieldList());
-            AllList.displayList(AllList.filterList());
-            AllList.displayList(AllList.sortList());
-            AllList.displayList(AllList.armeList());
+            AllList.displayArrayList((AllList.playerNameList(playeOneName)));
+            AllList.displayArrayList(AllList.dragonList());
+            AllList.displayArrayList(AllList.succubeList());
+            AllList.displayArrayList(AllList.wizzardList());
+            AllList.displayArrayList(AllList.shieldList());
+            AllList.displayArrayList(AllList.filterList());
+            AllList.displayArrayList(AllList.sortListBox());
+            AllList.displayArrayList(AllList.armeListBox());
 
 
             System.out.println("<----------------------->");
