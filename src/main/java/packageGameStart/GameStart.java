@@ -44,6 +44,7 @@ public class GameStart {
                 System.out.println("Que voulez vous être :\n\t1-Guerrier\n\t2-Magicien :  ");
                 String choixPerso = sc.nextLine();
                 if (choixPerso.equals("1")) {
+                    // Factory.getInstanceGuerrier();
                     System.out.println("vous etes un Guerrier");
                     choixDePerso = false;
 

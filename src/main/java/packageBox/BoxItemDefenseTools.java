@@ -22,4 +22,10 @@ public class BoxItemDefenseTools extends Box {
     public String toString() {
         return super.toString() + "Nom : " + getItemDefense();
     }
+
+
+//    @Override
+//    public void interactWithBox(){
+//        perso.sqetItemDefensetOOLLS5
+//    }
 }

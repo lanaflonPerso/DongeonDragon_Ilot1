@@ -20,4 +20,5 @@ public abstract class Box {
 		return "Nom de la caisse surprise : " +  getName();
 	}
 
+//	public abstract void interactWithBox();
 }
