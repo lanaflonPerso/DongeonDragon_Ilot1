@@ -1,4 +1,4 @@
-package packageResteInGame;
+package packageGameStart;
 
 import packageAllList.*;
 import packageEnemies.*;
@@ -7,7 +7,7 @@ import packageInGame.LanceDeDe;
 import packageMenuIntroduction.MenuIntroduction;
 import java.util.Scanner;
 
-public class  ResteInGame {
+public class GameStart {
     private static Scanner sc;
     Dragon dragon = null;
     Wizzard wizzard = null;
@@ -84,4 +84,5 @@ public class  ResteInGame {
         }
     }
     }
+
 }
