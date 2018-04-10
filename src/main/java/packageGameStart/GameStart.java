@@ -5,7 +5,7 @@ import packageEnemies.*;
 
 import packageInGame.LanceDeDe;
 import packageMenuIntroduction.MenuIntroduction;
-
+import packageChoixPerso.ChoixPerso;
 import java.util.Scanner;
 
 
@@ -30,36 +30,39 @@ public class GameStart {
             System.out.println("Nom du Player One");
             String playeOneName = sc.nextLine();
             AllList.playerNameList(playeOneName);
+
             System.out.println("<----------------------->");
-            System.out.println(playeOneName);
+//          System.out.println(playeOneName);
 
             AllList.displayArrayList((AllList.playerNameList(playeOneName)));
-            AllList.displayArrayList(AllList.dragonList());
-            AllList.displayArrayList(AllList.succubeList());
-            AllList.displayArrayList(AllList.wizzardList());
-            AllList.displayArrayList(AllList.shieldList());
-            AllList.displayArrayList(AllList.filterList());
-            AllList.displayArrayList(AllList.sortListBox());
-            AllList.displayArrayList(AllList.armeListBox());
+//            AllList.displayArrayList(AllList.dragonList());
+//            AllList.displayArrayList(AllList.succubeList());
+//            AllList.displayArrayList(AllList.wizzardList());
+//            AllList.displayArrayList(AllList.shieldList());
+//            AllList.displayArrayList(AllList.filterList());
+//            AllList.displayArrayList(AllList.sortListBox());
+//            AllList.displayArrayList(AllList.armeListBox());
 
                 System.out.println("<----------------------->");
-                boolean choixDePerso = true;
-                while (choixDePerso) {
-                    System.out.println("Que voulez vous être :\n\t1-Guerrier\n\t2-Magicien :  ");
-                    String choixPerso = sc.nextLine();
-                    if (choixPerso.equals("1")) {
-                        System.out.println("vous etes un Guerrier");
-                        choixDePerso = false;
 
-                    } else if (choixPerso.equals("2")) {
-                        System.out.println("vous etes un Magicien");
-                        choixDePerso = false;
-                    } else {
-                        System.out.println("<----------------------------------------->");
-                        System.out.println("Deux choix possible : 1-Guerrier 2-Magicien");
-                        System.out.println("<----------------------------------------->");
-                    }
-                }
+               ChoixPerso.choixPersonnage();
+//                boolean choixDePerso = true;
+//                while (choixDePerso) {
+//                    System.out.println("Que voulez vous être :\n\t1-Guerrier\n\t2-Magicien :  ");
+//                    String choixPerso = sc.nextLine();
+//                    if (choixPerso.equals("1")) {
+//                        System.out.println("vous etes un Guerrier");
+//                        choixDePerso = false;
+//
+//                    } else if (choixPerso.equals("2")) {
+//                        System.out.println("vous etes un Magicien");
+//                        choixDePerso = false;
+//                    } else {
+//                        System.out.println("<----------------------------------------->");
+//                        System.out.println("Deux choix possible : 1-Guerrier 2-Magicien");
+//                        System.out.println("<----------------------------------------->");
+//                    }
+//                }
 
                 boolean lanceDe = true;
                 while (lanceDe) {
