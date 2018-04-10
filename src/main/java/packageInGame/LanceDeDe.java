@@ -45,49 +45,46 @@ public class LanceDeDe {
                 bouDuChemin = false;
             }
         }*/
-         
+
         boolean loop = true;
         boolean loop1 = true;
         int test = 0;
-        
-        while(loop) {
-        	if(plateau < 64) {
-	            System.out.println("<---------------------------------->");
-	            System.out.println("Lancé le Dé en Appuyant sur entée");
-	            System.out.println("<---------------------------------->");
-	            sc.nextLine();
-	            System.out.println("<---------------------------------->");
+
+        while (loop) {
+            if (plateau < 64) {
+                System.out.println("<---------------------------------->");
+                System.out.println("Lancé le Dé en Appuyant sur entée");
+                System.out.println("<---------------------------------->");
+                sc.nextLine();
+                System.out.println("<---------------------------------->");
                 test = deSix();
                 plateau += test;
-	            System.out.println("Votre position sur le plateau est : " + plateau + " <= 63 :");
-	            //plateauJeu[plateau] = plateau;
-        	}
-        	else 
-        		loop = false;
+                System.out.println("Votre position sur le plateau est : " + plateau + " <= 63 :");
+                //plateauJeu[plateau] = plateau;
+            } else loop = false;
         }
 
-                while(loop1) {
-                		
-                		plateau -= test;
-		                System.out.println("<---------------------------------->");
-		                System.out.println("<---------Décrémentation----------->");
-		                System.out.println("<---------------------------------->");
-		                
-		                sc.nextLine();
-		                test = deSix();
-		                plateau += test;
-	                	
-	                	System.out.println("<-------------Lancer de Dé = " + test + "--------------------->");
-                //plateauJeu[plateau] = plateau;
-	                if(plateau > 64) {
-	                	System.out.println("if(" + plateau + " > 64 )");
-	                	loop1 = true;
-	                }
-	                else{
-	                		loop1 = false;
-	                		System.out.println("Valeur du plateau final : " + plateau);
-	                	}
-                }
+        while (loop1) {
+
+            plateau -= test;
+            System.out.println("<---------------------------------->");
+            System.out.println("<---------Décrémentation----------->");
+            System.out.println("<---------------------------------->");
+
+            sc.nextLine();
+            test = deSix();
+            plateau += test;
+
+            System.out.println("<-------------Lancer de Dé = " + test + "--------------------->");
+            //plateauJeu[plateau] = plateau;
+            if (plateau > 64) {
+                System.out.println("if(" + plateau + " > 64 )");
+                loop1 = true;
+            } else {
+                loop1 = false;
+                System.out.println("Valeur du plateau final : " + plateau);
+            }
+        }
 
     }
 }

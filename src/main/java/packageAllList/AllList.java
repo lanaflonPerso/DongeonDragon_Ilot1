@@ -13,7 +13,7 @@ public class AllList {
 
     public static void displayList(ArrayList<? extends Object> listElements) {
 
-   listElements.forEach(l -> System.out.println(l.toString()));
+        listElements.forEach(l -> System.out.println(l.toString()));
 
     }
 
@@ -22,6 +22,7 @@ public class AllList {
     ArrayList<CharactersEnemies> charactersEnemies = new ArrayList();
     ArrayList<CharactersPlayer> charactersWarriorList = new ArrayList<CharactersPlayer>();
     ArrayList<CharactersPlayer> charactersMagicianList = new ArrayList<CharactersPlayer>();
+
     public static ArrayList<PlayersName> playerNameList(String namePlay) {
         ArrayList<PlayersName> playersNameArrayList = new ArrayList<PlayersName>();
         playersNameArrayList.add(new PlayersName(namePlay));
@@ -66,7 +67,8 @@ public class AllList {
         shieldsList.add(new Shields("Ecu", "2"));
         return shieldsList;
     }
-    public static  ArrayList<Filters>filterList() {
+
+    public static ArrayList<Filters> filterList() {
         ArrayList<Filters> filtersList = new ArrayList<Filters>();
         filtersList.add(new Filters("Love", "5"));
         filtersList.add(new Filters("Persuasion", "3"));
@@ -74,13 +76,15 @@ public class AllList {
         return filtersList;
 
     }
-    public static ArrayList<WeaponsOffense>sortList(){
+
+    public static ArrayList<WeaponsOffense> sortList() {
         ArrayList<WeaponsOffense> sortsList = new ArrayList<WeaponsOffense>();
         sortsList.add(new Bow("Bow", "50", "80"));
         sortsList.add(new Lightning("Lightning", "80", "50"));
         return sortsList;
     }
-    public static ArrayList<WeaponsOffense>armeList(){
+
+    public static ArrayList<WeaponsOffense> armeList() {
         ArrayList<WeaponsOffense> armesList = new ArrayList<WeaponsOffense>();
         armesList.add(new Sword("Excaliburne", "65"));
         armesList.add(new Mace("KiKogne", "55"));

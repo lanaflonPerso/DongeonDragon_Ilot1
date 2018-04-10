@@ -1,11 +1,11 @@
 package packageEnemies;
 
-public class Succube extends  CharactersEnemies {
+public class Succube extends CharactersEnemies {
 
     private String attackLevel;
 
     public Succube(String pName, String pImage, String pLife, String pAttackLevel) {
-        super(pName,pImage,pLife);
+        super(pName, pImage, pLife);
         attackLevel = pAttackLevel;
     }
 
@@ -13,7 +13,7 @@ public class Succube extends  CharactersEnemies {
         return attackLevel;
     }
 
-    public void setAttackLevel(String attackLevel) { 
+    public void setAttackLevel(String attackLevel) {
         this.attackLevel = attackLevel;
     }
 

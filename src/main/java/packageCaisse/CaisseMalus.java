@@ -1,22 +1,22 @@
 package packageCaisse;
 
-public class CaisseMalus extends CharactersCaisse{
-	String caseMalus;
-	
-	public CaisseMalus(String pName, String pCaseMalus) {
-		super(pName);
-		this.caseMalus = pCaseMalus;
-	}
+public class CaisseMalus extends CharactersCaisse {
+    String caseMalus;
 
-	public String getCaseMalus() {
-		return caseMalus;
-	}
+    public CaisseMalus(String pName, String pCaseMalus) {
+        super(pName);
+        this.caseMalus = pCaseMalus;
+    }
 
-	public void setCaseMalus(String caseMalus) {
-		this.caseMalus = caseMalus;
-	}
+    public String getCaseMalus() {
+        return caseMalus;
+    }
 
-	public String toString() {
-		return super.toString() + "Recule de : " + getCaseMalus() + " cases.";
-	}
+    public void setCaseMalus(String caseMalus) {
+        this.caseMalus = caseMalus;
+    }
+
+    public String toString() {
+        return super.toString() + "Recule de : " + getCaseMalus() + " cases.";
+    }
 }

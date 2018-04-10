@@ -1,42 +1,37 @@
 package WeaponsOffense;
 
-public class Lightning extends WeaponsOffense{
-	private String bonusAttackWizards;
-	private String bonusAttackDragons;
-	
-	public Lightning(String pName, String pBonusAttackWizards, String pBonusAttackDragons) {
-		super(pName);
-		this.bonusAttackWizards = pBonusAttackWizards;
-		this.bonusAttackDragons = pBonusAttackDragons;
-	}
-	
+public class Lightning extends WeaponsOffense {
+    private String bonusAttackWizards;
+    private String bonusAttackDragons;
 
-	
-	public String getBonusAttackWizards() {
-		return bonusAttackWizards;
-	}
+    public Lightning(String pName, String pBonusAttackWizards, String pBonusAttackDragons) {
+        super(pName);
+        this.bonusAttackWizards = pBonusAttackWizards;
+        this.bonusAttackDragons = pBonusAttackDragons;
+    }
 
 
-
-	public void setBonusAttackWizards(String bonusAttackWizards) {
-		this.bonusAttackWizards = bonusAttackWizards;
-	}
-
+    public String getBonusAttackWizards() {
+        return bonusAttackWizards;
+    }
 
 
-	public String getBonusAttackDragons() {
-		return bonusAttackDragons;
-	}
+    public void setBonusAttackWizards(String bonusAttackWizards) {
+        this.bonusAttackWizards = bonusAttackWizards;
+    }
 
 
-
-	public void setBonusAttackDragons(String bonusAttackDragons) {
-		this.bonusAttackDragons = bonusAttackDragons;
-	}
-
+    public String getBonusAttackDragons() {
+        return bonusAttackDragons;
+    }
 
 
-	public String toString() {
-		return super.toString() + "Bonus d'attaque contre les Sorciers : " + getBonusAttackWizards() + "Bonus d'attaque contre les Dragons : " + getBonusAttackDragons();
-	}
+    public void setBonusAttackDragons(String bonusAttackDragons) {
+        this.bonusAttackDragons = bonusAttackDragons;
+    }
+
+
+    public String toString() {
+        return super.toString() + "Bonus d'attaque contre les Sorciers : " + getBonusAttackWizards() + "Bonus d'attaque contre les Dragons : " + getBonusAttackDragons();
+    }
 }
