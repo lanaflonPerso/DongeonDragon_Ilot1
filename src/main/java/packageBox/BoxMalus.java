@@ -4,9 +4,9 @@ public class BoxMalus extends Box {
 
 	String boxMalus;
 	
-	public BoxMalus(String pName, String pCaseMalus) {
+	public BoxMalus(String pName, String pBoxMalus) {
 		super(pName);
-		this.boxMalus = pCaseMalus;
+		this.boxMalus = pBoxMalus;
 	}
 
 	public String getBoxMalus() {

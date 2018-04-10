@@ -4,9 +4,9 @@ public class BoxJoker extends Box {
 
 	String boxLife;
 	
-	public BoxJoker(String pName, String pCaseHP) {
+	public BoxJoker(String pName, String pBoxLife) {
 		super(pName);
-		this.boxLife = pCaseHP;
+		this.boxLife = pBoxLife;
 	}
 	
 	public String getBoxLife() {
