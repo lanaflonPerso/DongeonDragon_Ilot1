@@ -1,4 +1,4 @@
-package WeaponsOffense;
+package packageWeaponsOffense;
 
 public class FireWall extends WeaponsOffense {
     private String attackAllEnemy;

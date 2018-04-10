@@ -1,8 +1,9 @@
-import packageResteInGame.*;
 
+import packageGameStart.*;
 public class MainClass {
     public static void main(String[] args) {
-        ResteInGame.InGame();
+//        gameInit();
+       GameStart.InGame();
 
     }
 }

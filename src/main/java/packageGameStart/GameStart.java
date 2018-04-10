@@ -1,4 +1,4 @@
-package packageResteInGame;
+package packageGameStart;
 
 import packageAllList.*;
 import packageEnemies.*;
@@ -8,7 +8,9 @@ import packageMenuIntroduction.MenuIntroduction;
 
 import java.util.Scanner;
 
-public class ResteInGame {
+
+public class GameStart {
+
     private static Scanner sc;
     Dragon dragon = null;
     Wizzard wizzard = null;
@@ -20,24 +22,25 @@ public class ResteInGame {
         boolean restInGame = true;
         while (restInGame) {
             sc = new Scanner(System.in);
-            System.out.println(MenuIntroduction.getDessinMenu());
-            System.out.println("Que voulez vous faire :\n\t1-Jouer\n\t2-Quitter");
-            String startGame = sc.nextLine();
-            if (startGame.equals("1")) {
-                System.out.println("Nom du Player One");
-                String playeOneName = sc.nextLine();
-                AllList.playerNameList(playeOneName);
-                System.out.println("<----------------------->");
-                System.out.println(playeOneName);
-                AllList.displayList(AllList.playerNameList(playeOneName));
-//            AllList.displayList(AllList.dragonList());
-//            AllList.displayList(AllList.succubeList());
-//            AllList.displayList(AllList.wizzardList());
-//            AllList.displayList(AllList.shieldList());
-//            AllList.displayList(AllList.filterList());
-//            AllList.displayList(AllList.sortList());
-//            AllList.displayList(AllList.armeList());
 
+        System.out.println(MenuIntroduction.getDessinMenu());
+        System.out.println("Que voulez vous faire :\n\t1-Jouer\n\t2-Quitter");
+        String startGame = sc.nextLine();
+        if (startGame.equals("1")) {
+            System.out.println("Nom du Player One");
+            String playeOneName = sc.nextLine();
+            AllList.playerNameList(playeOneName);
+            System.out.println("<----------------------->");
+            System.out.println(playeOneName);
+
+            AllList.displayArrayList((AllList.playerNameList(playeOneName)));
+            AllList.displayArrayList(AllList.dragonList());
+            AllList.displayArrayList(AllList.succubeList());
+            AllList.displayArrayList(AllList.wizzardList());
+            AllList.displayArrayList(AllList.shieldList());
+            AllList.displayArrayList(AllList.filterList());
+            AllList.displayArrayList(AllList.sortListBox());
+            AllList.displayArrayList(AllList.armeListBox());
 
                 System.out.println("<----------------------->");
                 boolean choixDePerso = true;
@@ -85,4 +88,8 @@ public class ResteInGame {
             }
         }
     }
-}
+
+    }
+
+
+

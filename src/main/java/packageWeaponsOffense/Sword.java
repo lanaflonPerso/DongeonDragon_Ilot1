@@ -1,4 +1,4 @@
-package WeaponsOffense;
+package packageWeaponsOffense;
 
 public class Sword extends WeaponsOffense {
     private String bonusAllAttack;

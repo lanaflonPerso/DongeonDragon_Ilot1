@@ -1,6 +1,6 @@
 package packageCharacters;
 
-import WeaponsOffense.*;
+import packageWeaponsOffense.*;
 import packageDefenseTools.Filters;
 
 public class Magician extends CharactersPlayer {

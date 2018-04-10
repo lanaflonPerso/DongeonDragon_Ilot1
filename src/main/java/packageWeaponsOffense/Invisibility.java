@@ -1,4 +1,4 @@
-package WeaponsOffense;
+package packageWeaponsOffense;
 
 public class Invisibility extends WeaponsOffense {
     private String attackAllEnemy;

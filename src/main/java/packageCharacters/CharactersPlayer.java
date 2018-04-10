@@ -1,6 +1,6 @@
 package packageCharacters;
 
-import WeaponsOffense.WeaponsOffense;
+import packageWeaponsOffense.WeaponsOffense;
 import packageDefenseTools.DefenseTools;
 
 public abstract class CharactersPlayer {

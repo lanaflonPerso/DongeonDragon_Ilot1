@@ -1,6 +1,6 @@
 package packageAllList;
 
-import WeaponsOffense.*;
+import packageWeaponsOffense.*;
 import packageCharacters.*;
 import packageDefenseTools.*;
 import packageEnemies.*;
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class AllList {
 
-    public static void displayList(ArrayList<? extends Object> listElements) {
+    public static void displayArrayList(ArrayList<? extends Object> listElements) {
 
         listElements.forEach(l -> System.out.println(l.toString()));
 
@@ -61,34 +61,33 @@ public class AllList {
     }
 
     public static ArrayList<Shields> shieldList() {
-        ArrayList<Shields> shieldsList = new ArrayList<Shields>();
-        shieldsList.add(new Shields("Orion", "5"));
-        shieldsList.add(new Shields("Oignion", "3"));
-        shieldsList.add(new Shields("Ecu", "2"));
-        return shieldsList;
+        ArrayList<Shields> shieldsListBox = new ArrayList<Shields>();
+        shieldsListBox.add(new Shields("Orion", "5"));
+        shieldsListBox.add(new Shields("Oignion", "3"));
+        shieldsListBox.add(new Shields("Ecu", "2"));
+        return shieldsListBox;
     }
 
-    public static ArrayList<Filters> filterList() {
-        ArrayList<Filters> filtersList = new ArrayList<Filters>();
-        filtersList.add(new Filters("Love", "5"));
-        filtersList.add(new Filters("Persuasion", "3"));
-        filtersList.add(new Filters("Protection", "2"));
-        return filtersList;
+    public static  ArrayList<Filters>filterList() {
+        ArrayList<Filters> filtersListBox = new ArrayList<Filters>();
+        filtersListBox.add(new Filters("Love", "5"));
+        filtersListBox.add(new Filters("Persuasion", "3"));
+        filtersListBox.add(new Filters("Protection", "2"));
+        return filtersListBox;
 
     }
-
-    public static ArrayList<WeaponsOffense> sortList() {
-        ArrayList<WeaponsOffense> sortsList = new ArrayList<WeaponsOffense>();
-        sortsList.add(new Bow("Bow", "50", "80"));
-        sortsList.add(new Lightning("Lightning", "80", "50"));
-        return sortsList;
+    public static ArrayList<WeaponsOffense>sortListBox(){
+        ArrayList<WeaponsOffense> sortsListBox = new ArrayList<WeaponsOffense>();
+        sortsListBox.add(new Bow("Bow", "50", "80"));
+        sortsListBox.add(new Lightning("Lightning", "80", "50"));
+        return sortsListBox;
     }
+    public static ArrayList<WeaponsOffense>armeListBox(){
+        ArrayList<WeaponsOffense> armesListBox = new ArrayList<WeaponsOffense>();
+        armesListBox.add(new Sword("Excaliburne", "65"));
+        armesListBox.add(new Mace("KiKogne", "55"));
+        return armesListBox;
 
-    public static ArrayList<WeaponsOffense> armeList() {
-        ArrayList<WeaponsOffense> armesList = new ArrayList<WeaponsOffense>();
-        armesList.add(new Sword("Excaliburne", "65"));
-        armesList.add(new Mace("KiKogne", "55"));
-        return armesList;
     }
 
 }
