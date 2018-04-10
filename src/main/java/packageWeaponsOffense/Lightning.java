@@ -1,4 +1,4 @@
-package WeaponsOffense;
+package packageWeaponsOffense;
 
 public class Lightning extends WeaponsOffense{
 	private String bonusAttackWizards;

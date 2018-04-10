@@ -1,10 +1,10 @@
-package packageCaisse;
+package packageBox;
 
-public abstract class CharactersCaisse {
+public abstract class Box {
 
 	private String name;
 	
-	public CharactersCaisse(String pName) {
+	public Box(String pName) {
 		this.name=pName;
 	}
 	

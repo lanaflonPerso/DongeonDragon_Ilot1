@@ -1,6 +1,6 @@
 package packageAllList;
 
-import WeaponsOffense.*;
+import packageWeaponsOffense.*;
 import packageCharacters.*;
 import packageDefenseTools.*;
 import packageEnemies.*;

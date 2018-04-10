@@ -1,4 +1,4 @@
-package WeaponsOffense;
+package packageWeaponsOffense;
 
 public abstract class WeaponsOffense {
     protected String name;

@@ -1,9 +1,9 @@
-package WeaponsOffense;
+package packageWeaponsOffense;
 
-public class FireWall extends WeaponsOffense{
+public class Invisibility extends WeaponsOffense{
 	private String attackAllEnemy;
-
-	public FireWall(String pName, String pAttackAllEnemy) {
+	
+	public Invisibility(String pName, String pAttackAllEnemy) {
 		super(pName);
 		this.attackAllEnemy = pAttackAllEnemy;
 	}
@@ -24,5 +24,5 @@ public class FireWall extends WeaponsOffense{
 
 	public String toString() {
 		return super.toString() + "Bonus d'attaque contre tous les ennemies : " + getAttackAllEnemy();
-	}	
+	}
 }

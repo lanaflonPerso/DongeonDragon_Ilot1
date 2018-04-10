@@ -1,4 +1,4 @@
-package WeaponsOffense;
+package packageWeaponsOffense;
 
 public class Mace extends WeaponsOffense{
 	private String attackAllEnemy;
