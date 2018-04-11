@@ -1,13 +1,14 @@
 package packagePlayersNames;
 
-public  class PlayersName {
+public class PlayersName {
 
     protected String name;
 
-    public  PlayersName(String nameOfplayer ){
-          this.name=nameOfplayer;
+    public PlayersName(String nameOfplayer) {
+        this.name = nameOfplayer;
     }
-        public String getName() {
+
+    public String getName() {
         return this.name;
     }
 
@@ -15,8 +16,8 @@ public  class PlayersName {
         this.name = name;
     }
 
-public String toString(){
-        return "Nom Du PLayer One : "+this.name;
+    public String toString() {
+        return "Nom Du PLayer One : " + this.name;
 
-}
+    }
 }

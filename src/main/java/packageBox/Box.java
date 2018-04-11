@@ -2,6 +2,7 @@ package packageBox;
 
 public abstract class Box {
 
+
 	private String name;
 	
 	public Box(String pName) {
@@ -12,12 +13,15 @@ public abstract class Box {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
 
-	public String toString() {
-		return "Nom de la caisse surprise : " +  getName();
-	}
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String toString() {
+        return "Nom de la caisse surprise : " + getName();
+    }
+
+//	public abstract void interactWithBox();
 }
