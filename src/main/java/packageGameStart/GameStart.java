@@ -17,30 +17,32 @@ public class GameStart {
     Succube succube = null;
 
 
-    public static void InGame() {
+    public  void InGame() {
 
         boolean restInGame = true;
         while (restInGame) {
             sc = new Scanner(System.in);
-
+             AllList allList = new AllList();
+             ChoixPerso choixPersonnel = new ChoixPerso();
+             LanceDeDe dede = new LanceDeDe();
         System.out.println(MenuIntroduction.getDessinMenu());
         System.out.println("Que voulez vous faire :\n\t1-Jouer\n\t2-Quitter");
         String startGame = sc.nextLine();
         if (startGame.equals("1")) {
             System.out.println("Nom du Player One");
             String playeOneName = sc.nextLine();
-            AllList.playerNameList(playeOneName);
+            allList.playerNameList(playeOneName);
 
             System.out.println("<----------------------->");
 
 
-            AllList.displayArrayList((AllList.playerNameList(playeOneName)));
-            AllList.displayArrayList(AllList.dragonList());
-            AllList.displayArrayList(AllList.succubeList());
-            AllList.displayArrayList(AllList.wizzardList());
-            AllList.displayArrayList(AllList.shieldList());
-            AllList.displayArrayList(AllList.filterList());
-            AllList.displayArrayList(AllList.listEvent());
+            allList.displayArrayList((allList.playerNameList(playeOneName)));
+            allList.displayArrayList(allList.dragonList());
+            allList.displayArrayList(allList.succubeList());
+            allList.displayArrayList(allList.wizzardList());
+            allList.displayArrayList(allList.shieldList());
+            allList.displayArrayList(allList.filterList());
+            allList.displayArrayList(allList.listEvent());
 
             System.out.println("<----------------------->");
             boolean choixDePerso = true;
@@ -65,7 +67,7 @@ public class GameStart {
 
                 System.out.println("<----------------------->");
                 
-               ChoixPerso.choixPersonnage();
+               choixPersonnel.choixPersonnage();
 
 
                 boolean lanceDe = true;
@@ -74,7 +76,7 @@ public class GameStart {
                     System.out.println("Que voulez vous faire :\n\t1-Commencer une Partie\n\t2-Sortir\n\t3-Quitter le jeu");
                     String choixDeSix = sc.nextLine();
                     if (choixDeSix.equals("1")) {
-                        LanceDeDe.plateauDeJeu();
+                        dede.plateauDeJeu();
                     } else if (choixDeSix.equals("2")) {
                         lanceDe = false;
                     } else if (choixDeSix.equals("3")) {

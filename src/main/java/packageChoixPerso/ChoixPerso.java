@@ -12,14 +12,14 @@ import java.util.Scanner;
 
 public class ChoixPerso {
     private static Scanner sc;
-    private static Warrior warrior;
-    private static Magician magician;
+//    private static Warrior warrior;
+//    private static Magician magician;
     
    
     
-    public static void choixPersonnage(){
+    public  void choixPersonnage(){
         sc = new Scanner(System.in);
-        
+        AllList newList = new AllList();
         boolean choixDePerso = true;
         boolean choixWeappon = true;
         String sChoiceWeappon; 
@@ -36,7 +36,7 @@ public class ChoixPerso {
 	            System.out.println("Choisie tes armes dans la liste : \n");
 	            System.out.println("Tu as le droit à 2 armes.");
             
-	            ArrayList<WeaponsOffense> alArmeListWarrior = AllList.armeListWarrior();
+	            ArrayList<WeaponsOffense> alArmeListWarrior = newList.armeListWarrior();
 
 	            for(int i=0; i< alArmeListWarrior.size();i++) {
 	            	System.out.println("\t---- " + i + " ----");
@@ -51,19 +51,19 @@ public class ChoixPerso {
 
 	            		case "0" :
 	            			nChoiceWeappon = Integer.parseInt(sChoiceWeappon);
-	            			AllList.charactersWarriorList.add(new Warrior("Naia", "Je suis un Guerrier", "100", "15", alArmeListWarrior.get(nChoiceWeappon), null));
+	            			newList.charactersWarriorList.add(new Warrior("Naia", "Je suis un Guerrier", "100", "15", alArmeListWarrior.get(nChoiceWeappon), null));
 	            			choixWeappon = false;
 		            		break;
 		            	
 		            	case "1" :
 		            		nChoiceWeappon = Integer.parseInt(sChoiceWeappon);
-		            		AllList.charactersWarriorList.add(new Warrior("HellRose", "Je suis un Guerrier", "100", "15", alArmeListWarrior.get(nChoiceWeappon), null));
+		            		newList.charactersWarriorList.add(new Warrior("HellRose", "Je suis un Guerrier", "100", "15", alArmeListWarrior.get(nChoiceWeappon), null));
 		            		choixWeappon = false;
 		            		break;
 		            		
 		            	case "2" :
 		            		nChoiceWeappon = Integer.parseInt(sChoiceWeappon);
-		            		AllList.charactersWarriorList.add(new Warrior("MalchanceMan", "Je suis un Guerrier malchanceux", "100", "15", alArmeListWarrior.get(nChoiceWeappon), null));
+		            		newList.charactersWarriorList.add(new Warrior("MalchanceMan", "Je suis un Guerrier malchanceux", "100", "15", alArmeListWarrior.get(nChoiceWeappon), null));
 		            		choixWeappon = false;
 		            		break;
 		            		
@@ -81,7 +81,7 @@ public class ChoixPerso {
 	            System.out.println("Choisie tes Sorts dans la liste : \n");
 	            System.out.println("Tu as le droit à 2 Sorts.");
             
-	            ArrayList<WeaponsOffense> alSortListMagician = AllList.sortListMagician();
+	            ArrayList<WeaponsOffense> alSortListMagician = newList.sortListMagician();
 	            
 	            for(int i=0; i< alSortListMagician.size();i++) {
 	            	System.out.println("\t---- " + i + " ----");
@@ -96,19 +96,19 @@ public class ChoixPerso {
 	            		case "0" :
 	            			//System.out.println(sChoiceWeappon);
 	            			nChoiceWeappon = Integer.parseInt(sChoiceWeappon);
-	            			AllList.charactersMagicianList.add(new Magician("Docteur Strange", "Je suis un Magicien", "100", "15", alSortListMagician.get(nChoiceWeappon), null));
+	            			newList.charactersMagicianList.add(new Magician("Docteur Strange", "Je suis un Magicien", "100", "15", alSortListMagician.get(nChoiceWeappon), null));
 		            		choixWeappon = false;
 		            		break;
 		            	
 		            	case "1" :
 		            		nChoiceWeappon = Integer.parseInt(sChoiceWeappon);
-		            		AllList.charactersMagicianList.add(new Magician("La Sorciere Rouge", "Je suis un Magicien", "100", "15", alSortListMagician.get(nChoiceWeappon), null));
+		            		newList.charactersMagicianList.add(new Magician("La Sorciere Rouge", "Je suis un Magicien", "100", "15", alSortListMagician.get(nChoiceWeappon), null));
 		            		choixWeappon = false;
 		            		break;
 		            		
 		            	case "2" :
 		            		nChoiceWeappon = Integer.parseInt(sChoiceWeappon);
-		            		AllList.charactersMagicianList.add(new Magician("Gandalf", "Je suis un Magicien", "100", "15", alSortListMagician.get(nChoiceWeappon), null));
+		            		newList.charactersMagicianList.add(new Magician("Gandalf", "Je suis un Magicien", "100", "15", alSortListMagician.get(nChoiceWeappon), null));
 		            		choixWeappon = false;
 		            		break;
 		            		
