@@ -9,14 +9,29 @@ import packageChoixPerso.ChoixPerso;
 import java.util.Scanner;
 
 
+/**
+ * The type Game start.
+ */
 public class GameStart {
 
     private static Scanner sc;
+    /**
+     * The Dragon.
+     */
     Dragon dragon = null;
+    /**
+     * The Wizzard.
+     */
     Wizzard wizzard = null;
+    /**
+     * The Succube.
+     */
     Succube succube = null;
 
 
+    /**
+     * In game.
+     */
     public  void InGame() {
 
         boolean restInGame = true;

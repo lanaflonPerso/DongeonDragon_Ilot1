@@ -15,6 +15,9 @@ import packageWeaponsOffense.*;
 import java.util.ArrayList;
 
 
+/**
+ * The type All list.
+ */
 public class AllList {
 
     public ArrayList<WeaponsOffense> weaponsOffenseList = new ArrayList<WeaponsOffense>();
@@ -23,12 +26,23 @@ public class AllList {
     public  ArrayList<CharactersPlayer> charactersWarriorList = new ArrayList<CharactersPlayer>();
     public  ArrayList<CharactersPlayer> charactersMagicianList = new ArrayList<CharactersPlayer>();
 
+    /**
+     * Display array list.
+     *
+     * @param listElements the list elements
+     */
     public  void displayArrayList(ArrayList<? extends Object> listElements) {
 
         listElements.forEach(l -> System.out.println(l.toString()));
 
     }
-    
+
+    /**
+     * Player name list array list.
+     *
+     * @param namePlay the name play
+     * @return the array list
+     */
     public  ArrayList<PlayersName> playerNameList(String namePlay) {
         ArrayList<PlayersName> playersNameArrayList = new ArrayList<PlayersName>();
         playersNameArrayList.add(new PlayersName(namePlay));

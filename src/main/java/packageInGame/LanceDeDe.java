@@ -3,10 +3,18 @@ package packageInGame;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * The type Lance de de.
+ */
 public class LanceDeDe {
     private static Scanner sc;
 
 
+    /**
+     * De six int.
+     *
+     * @return the int
+     */
     public  int deSix() {
 
         Random deSix = new Random();
@@ -15,6 +23,9 @@ public class LanceDeDe {
         return resultatDeSix;
     }
 
+    /**
+     * Plateau de jeu.
+     */
     public  void plateauDeJeu() {
         sc = new Scanner(System.in);
         LanceDeDe dede = new LanceDeDe();
