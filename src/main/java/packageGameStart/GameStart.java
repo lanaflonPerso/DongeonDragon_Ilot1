@@ -28,12 +28,14 @@ public class GameStart {
         System.out.println(MenuIntroduction.getDessinMenu());
         System.out.println("Que voulez vous faire :\n\t1-Jouer\n\t2-Quitter");
         String startGame = sc.nextLine();
+        
         if (startGame.equals("1")) {
             System.out.println("Nom du Player One");
             String playeOneName = sc.nextLine();
             allList.playerNameList(playeOneName);
 
             System.out.println("<----------------------->");
+
 
 
             allList.displayArrayList((allList.playerNameList(playeOneName)));
@@ -44,25 +46,11 @@ public class GameStart {
             allList.displayArrayList(allList.filterList());
             allList.displayArrayList(allList.listEvent());
 
-            System.out.println("<----------------------->");
-            boolean choixDePerso = true;
-            while (choixDePerso) {
-                System.out.println("Que voulez vous être :\n\t1-Guerrier\n\t2-Magicien :  ");
-                String choixPerso = sc.nextLine();
-                if (choixPerso.equals("1")) {
-                    // Factory.getInstanceGuerrier();
-                    System.out.println("vous etes un Guerrier");
-                    choixDePerso = false;
 
-                } else if (choixPerso.equals("2")) {
-                    System.out.println("vous etes un Magicien");
-                    choixDePerso = false;
-                } else {
-                    System.out.println("<----------------------------------------->");
-                    System.out.println("Deux choix possible : 1-Guerrier 2-Magicien");
-                    System.out.println("<----------------------------------------->");
-                }
-            }
+
+            System.out.println("<----------------------->");
+
+            choixPersonnel.choixPersonnage();
 
 
                 System.out.println("<----------------------->");
@@ -87,9 +75,11 @@ public class GameStart {
                         System.out.println("3 choix seulement : 1,2 ou,3");
                         System.out.println("<---------------------------------->");
                     }
-                }
 
-            } else if (startGame.equals("2")) {
+                }
+            }
+
+             else if (startGame.equals("2")) {
                 restInGame = false;
             } else {
                 System.out.println("<---------------------------------->");
