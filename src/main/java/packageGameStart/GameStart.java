@@ -43,7 +43,6 @@ public class GameStart {
             AllList.displayArrayList(AllList.listEvent());
 
             System.out.println("<----------------------->");
-            boolean choixDePerso = true;
 
            ChoixPerso.choixPersonnage();
 
