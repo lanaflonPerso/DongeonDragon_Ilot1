@@ -6,7 +6,7 @@ public abstract class CharactersEnemies {
     private String image;
     private String life;
 
-    public CharactersEnemies(String pName, String pImage, String pLife){
+    public CharactersEnemies(String pName, String pImage, String pLife) {
         name = pName;
         image = pImage;
         life = pLife;
@@ -14,8 +14,8 @@ public abstract class CharactersEnemies {
 
     public String getName() {
         return name;
-    } 
- 
+    }
+
     public void setName(String name) {
         this.name = name;
     }
