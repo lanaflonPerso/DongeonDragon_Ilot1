@@ -2,6 +2,8 @@ package packageCharacters;
 
 import packageWeaponsOffense.*;
 
+import java.util.ArrayList;
+
 import packageDefenseTools.Shields;
 
 public class Warrior extends CharactersPlayer {

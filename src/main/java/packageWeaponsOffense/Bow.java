@@ -27,6 +27,6 @@ public class Bow extends WeaponsOffense {
     }
 
     public String toString() {
-        return super.toString() + "Bonus d'attaque contre les dragons : " + getBonusAttackDragons() + "Bonus d'attaque contre les succubes : " + getBonusAttackSuccubus();
+        return super.toString() + "- Bonus d'attaque contre les dragons : " + getBonusAttackDragons() + "\n- Bonus d'attaque contre les succubes : " + getBonusAttackSuccubus() + "\n";
     }
 }
