@@ -3,19 +3,32 @@ package packageInGame;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * The type Lance de de.
+ */
 public class LanceDeDe {
     private static Scanner sc;
 
 
-    public static int deSix() {
+    /**
+     * De six int.
+     *
+     * @return the int
+     */
+    public  int deSix() {
+
         Random deSix = new Random();
         int resultatDeSix = deSix.nextInt(6) + 1;
         System.out.println("Résultat de votre Lancé : " + resultatDeSix);
         return resultatDeSix;
     }
 
-    public static void plateauDeJeu() {
+    /**
+     * Plateau de jeu.
+     */
+    public  void plateauDeJeu() {
         sc = new Scanner(System.in);
+        LanceDeDe dede = new LanceDeDe();
         boolean bouDuChemin = true;
         int plateauJeu[] = new int[64];
         int plateau = 50;
@@ -32,7 +45,7 @@ public class LanceDeDe {
                 System.out.println("<---------------------------------->");
                 sc.nextLine();
                 System.out.println("<---------------------------------->");
-                test = deSix();
+                test = dede.deSix();
                 plateau += test;
                 System.out.println("Votre position sur le plateau est : " + plateau + " <= 63 :");
                 //plateauJeu[plateau] = plateau;
@@ -47,7 +60,7 @@ public class LanceDeDe {
             System.out.println("<---------------------------------->");
 
             sc.nextLine();
-            test = deSix();
+            test = dede.deSix();
             plateau += test;
 
             System.out.println("<-------------Lancer de Dé = " + test + "--------------------->");
