@@ -35,8 +35,7 @@ public class GameStart {
             AllList.displayArrayList(AllList.wizzardList());
             AllList.displayArrayList(AllList.shieldList());
             AllList.displayArrayList(AllList.filterList());
-            AllList.displayArrayList(AllList.sortListBox());
-            AllList.displayArrayList(AllList.armeListBox());
+            AllList.displayArrayList(AllList.listEvent());
 
             System.out.println("<----------------------->");
             boolean choixDePerso = true;
