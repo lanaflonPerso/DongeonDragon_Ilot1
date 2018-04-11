@@ -16,7 +16,6 @@ public abstract class WeaponsOffense {
     }
 
     public String toString() {
-        return "Nom de l'arme offensive : " + getName();
+        return "\n- Nom de l'arme offensive : " + getName() + ".\n";
     }
-
 }

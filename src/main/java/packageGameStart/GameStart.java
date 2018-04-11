@@ -33,7 +33,7 @@ public class GameStart {
 
             System.out.println("<----------------------->");
 //          System.out.println(playeOneName);
-
+            
             AllList.displayArrayList((AllList.playerNameList(playeOneName)));
 //            AllList.displayArrayList(AllList.dragonList());
 //            AllList.displayArrayList(AllList.succubeList());
@@ -44,7 +44,7 @@ public class GameStart {
 //            AllList.displayArrayList(AllList.armeListBox());
 
                 System.out.println("<----------------------->");
-
+                
                ChoixPerso.choixPersonnage();
 //                boolean choixDePerso = true;
 //                while (choixDePerso) {
@@ -65,6 +65,7 @@ public class GameStart {
 //                }
 
                 boolean lanceDe = true;
+
                 while (lanceDe) {
                     System.out.println("Que voulez vous faire :\n\t1-Commencer une Partie\n\t2-Sortir\n\t3-Quitter le jeu");
                     String choixDeSix = sc.nextLine();

@@ -62,7 +62,7 @@ public abstract class CharactersPlayer {
 
     @Override
     public String toString() {
-        return "CharactersPlayer [weaponOffense=" + weaponOffense + "\n defenseTools=" + defenseTools + ", name=" + name + ", life=" + life + ", image=" + image + ", Attack=" + Attack + "]";
+        return "CharactersPlayer [ weaponOffense = " + weaponOffense + "- defenseTools=" + defenseTools + ".\n- name : " + name + ".\n- life : " + life + ".\n- image : " + image + ".\n- Attack : " + Attack + ".]\n";
     }
 
 

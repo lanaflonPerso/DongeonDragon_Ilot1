@@ -17,6 +17,6 @@ public class Mace extends WeaponsOffense {
     }
 
     public String toString() {
-        return super.toString() + "Points d'attaque : " + getAttackAllEnemy();
+        return super.toString() + "- Points d'attaque : " + getAttackAllEnemy() + ".\n";
     }
 }

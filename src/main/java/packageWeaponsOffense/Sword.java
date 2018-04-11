@@ -17,7 +17,7 @@ public class Sword extends WeaponsOffense {
     }
 
     public String toString() {
-        return super.toString() + "Bonus d'attaque : " + getBonusAllAttack();
+        return super.toString() + "- Bonus d'attaque : " + getBonusAllAttack() + "\n";
     }
 
 }

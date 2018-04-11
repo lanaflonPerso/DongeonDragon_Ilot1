@@ -11,18 +11,18 @@ import java.util.ArrayList;
 
 public class AllList {
 
+    public ArrayList<WeaponsOffense> weaponsOffenseList = new ArrayList<WeaponsOffense>();
+    public ArrayList<DefenseTools> defenseToolsList = new ArrayList<DefenseTools>();
+    public ArrayList<CharactersEnemies> charactersEnemies = new ArrayList<CharactersEnemies>();
+    public static ArrayList<CharactersPlayer> charactersWarriorList = new ArrayList<CharactersPlayer>();
+    public static ArrayList<CharactersPlayer> charactersMagicianList = new ArrayList<CharactersPlayer>();
+
     public static void displayArrayList(ArrayList<? extends Object> listElements) {
 
         listElements.forEach(l -> System.out.println(l.toString()));
 
     }
-
-    ArrayList<WeaponsOffense> weaponsOffenseList = new ArrayList<WeaponsOffense>();
-    ArrayList<DefenseTools> defenseToolsList = new ArrayList<DefenseTools>();
-    ArrayList<CharactersEnemies> charactersEnemies = new ArrayList();
-    ArrayList<CharactersPlayer> charactersWarriorList = new ArrayList<CharactersPlayer>();
-    ArrayList<CharactersPlayer> charactersMagicianList = new ArrayList<CharactersPlayer>();
-
+    
     public static ArrayList<PlayersName> playerNameList(String namePlay) {
         ArrayList<PlayersName> playersNameArrayList = new ArrayList<PlayersName>();
         playersNameArrayList.add(new PlayersName(namePlay));
@@ -60,14 +60,6 @@ public class AllList {
         return wizzardsList;
     }
 
-    public static ArrayList<Shields> shieldList() {
-        ArrayList<Shields> shieldsListBox = new ArrayList<Shields>();
-        shieldsListBox.add(new Shields("Orion", "5"));
-        shieldsListBox.add(new Shields("Oignion", "3"));
-        shieldsListBox.add(new Shields("Ecu", "2"));
-        return shieldsListBox;
-    }
-
     public static  ArrayList<Filters>filterList() {
         ArrayList<Filters> filtersListBox = new ArrayList<Filters>();
         filtersListBox.add(new Filters("Love", "5"));
@@ -76,6 +68,15 @@ public class AllList {
         return filtersListBox;
 
     }
+    
+    public static ArrayList<Shields> shieldList() {
+        ArrayList<Shields> shieldsListBox = new ArrayList<Shields>();
+        shieldsListBox.add(new Shields("Orion", "5"));
+        shieldsListBox.add(new Shields("Oignion", "3"));
+        shieldsListBox.add(new Shields("Ecu", "2"));
+        return shieldsListBox;
+    }
+    
     public static ArrayList<WeaponsOffense>sortListBox(){
         ArrayList<WeaponsOffense> sortsListBox = new ArrayList<WeaponsOffense>();
         sortsListBox.add(new Bow("Bow", "50", "80"));
@@ -87,7 +88,21 @@ public class AllList {
         armesListBox.add(new Sword("Excaliburne", "65"));
         armesListBox.add(new Mace("KiKogne", "55"));
         return armesListBox;
-
     }
 
+    public static ArrayList<WeaponsOffense>armeListWarrior(){
+    	ArrayList<WeaponsOffense> armesListWarrior = new ArrayList<WeaponsOffense>();
+    	armesListWarrior.add(new Mace("KiKogne", "55"));
+    	armesListWarrior.add(new Sword("Excaliburne", "65"));
+    	armesListWarrior.add(new Bow("Arc flamboyant", "50", "80"));
+    	return armesListWarrior;
+    }
+    
+    public static ArrayList<WeaponsOffense>sortListMagician(){
+    	ArrayList<WeaponsOffense> sortListMagician = new ArrayList<WeaponsOffense>();
+    	sortListMagician.add(new FireWall("FireWall", "25"));
+    	sortListMagician.add(new Invisibility("Invisibility","30"));
+    	sortListMagician.add(new Lightning("Lightning", "50", "25"));//3
+    	return sortListMagician;
+    }
 }
