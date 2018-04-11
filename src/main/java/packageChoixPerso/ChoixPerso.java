@@ -2,9 +2,9 @@ package packageChoixPerso;
 
 import packageAllList.*;
 import packageWeaponsOffense.*;
-import packageWeaponsOffense.*;
+//import packageWeaponsOffense.*;
 import packageCharacters.*;
-import packageDefenseTools.*;
+//import packageDefenseTools.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -17,7 +17,7 @@ public class ChoixPerso {
     
    
     
-    public  void choixPersonnage(){
+    public void choixPersonnage(){
         sc = new Scanner(System.in);
         AllList newList = new AllList();
         boolean choixDePerso = true;
