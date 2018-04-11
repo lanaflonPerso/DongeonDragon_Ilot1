@@ -25,7 +25,6 @@ public class ChoixPerso {
                 System.out.println("<----------------------------------------->");
             }
         }
-
     }
 
     }

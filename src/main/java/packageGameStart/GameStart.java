@@ -17,7 +17,7 @@ public class GameStart {
     Succube succube = null;
 
 
-    public static void InGame() {
+    public  void InGame() {
 
         boolean restInGame = true;
         while (restInGame) {
