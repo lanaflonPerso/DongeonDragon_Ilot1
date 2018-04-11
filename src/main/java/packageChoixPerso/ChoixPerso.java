@@ -1,10 +1,9 @@
 package packageChoixPerso;
 
-import packageAllList.*;
-import packageWeaponsOffense.*;
-import packageWeaponsOffense.*;
-import packageCharacters.*;
-import packageDefenseTools.*;
+import packageAllList.AllList;
+import packageCharacters.Magician;
+import packageCharacters.Warrior;
+import packageWeaponsOffense.WeaponsOffense;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -45,8 +44,7 @@ public class ChoixPerso {
 
 	            while(choixWeappon) {
 	            	sChoiceWeappon = sc.nextLine();
-	            	
-	            	
+
 	            	switch(sChoiceWeappon){
 
 	            		case "0" :
@@ -73,9 +71,6 @@ public class ChoixPerso {
 		            		break;
 	            	}
 	            }
-	            
-            	choixDePerso = false;
-
             } else if (choix.equals("2")) {
                 System.out.println("Vous etes un Magicien");
 	            System.out.println("Choisie tes Sorts dans la liste : \n");
@@ -119,13 +114,12 @@ public class ChoixPerso {
 	            	}
 	            }
 
-                choixDePerso = false;
             } else {
                 System.out.println("<----------------------------------------->");
                 System.out.println("Deux choix possible : 1-Guerrier 2-Magicien");
                 System.out.println("<----------------------------------------->");
             }
+			choixDePerso = false;
         }
-    }
-
+	}
     }

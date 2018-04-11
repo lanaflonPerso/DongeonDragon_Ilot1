@@ -52,12 +52,6 @@ public class GameStart {
 
             choixPersonnel.choixPersonnage();
 
-
-                System.out.println("<----------------------->");
-                
-               choixPersonnel.choixPersonnage();
-
-
                 boolean lanceDe = true;
 
                 while (lanceDe) {
