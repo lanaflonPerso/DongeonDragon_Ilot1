@@ -39,6 +39,6 @@ public class Invisibility extends WeaponsOffense {
 
 
     public String toString() {
-        return super.toString() + "Bonus d'attaque contre tous les ennemies : " + getAttackAllEnemy();
+        return super.toString() + "- Bonus d'attaque contre tous les ennemies : " + getAttackAllEnemy() + ".\n";
     }
 }

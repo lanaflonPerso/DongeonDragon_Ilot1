@@ -62,6 +62,6 @@ public class Lightning extends WeaponsOffense {
 
 
     public String toString() {
-        return super.toString() + "Bonus d'attaque contre les Sorciers : " + getBonusAttackWizards() + "Bonus d'attaque contre les Dragons : " + getBonusAttackDragons();
+        return super.toString() + "- Bonus d'attaque contre les Sorciers : " + getBonusAttackWizards() + ".\n- Bonus d'attaque contre les Dragons : " + getBonusAttackDragons() + ".\n";
     }
 }
