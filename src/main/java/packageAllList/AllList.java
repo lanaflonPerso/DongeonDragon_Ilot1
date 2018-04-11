@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 
 public class AllList {
+	
 
     public static void displayArrayList(ArrayList<? extends Object> listElements) {
 
