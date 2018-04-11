@@ -44,7 +44,7 @@ public class GameStart {
 
             System.out.println("<----------------------->");
 
-           ChoixPerso.choixPersonnage();
+            ChoixPerso.choixPersonnage();
 
 
             boolean lanceDe = true;
