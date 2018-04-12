@@ -1,4 +1,5 @@
 package packageCombat;
+import packageWeaponsOffense.*;
 
 public class CombatSword implements CombatType {
 
