@@ -13,7 +13,15 @@ import packageWeaponsOffense.Mace;
 
 import java.util.ArrayList;
 
+/**
+ * The type List event.
+ */
 public class ListEvent {
+    /**
+     * List event array list.
+     *
+     * @return the array list
+     */
     public static ArrayList<Object> listEvent() {
         ArrayList<Object> listEvent = new ArrayList<Object>();
         listEvent.add(new Wizzard("sorcier novice", "image", "40", "15"));

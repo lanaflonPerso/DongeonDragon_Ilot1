@@ -8,12 +8,21 @@ import packageBox.*;
 import packageEnemies.*;
 
 
+/**
+ * The type Game board.
+ */
 public class GameBoard {
-	
-	public static Object boardTest[] = new Object[64]; /* Instance d'un nouveau tableau d'objets qui sera initialisé 
+
+	/**
+	 * The constant boardTest.
+	 */
+	public static Object boardTest[] = new Object[64]; /* Instance d'un nouveau tableau d'objets qui sera initialisé
 														à 64 case mémoires qui prendrons comme valeurs null par défaut. */
-	
-	
+
+
+	/**
+	 * Game board init.
+	 */
 	public static void GameBoardInit(){
 		
 		ArrayList<Object> myList = ListEvent.listEvent(); /*  Instance d'une nouvelle ArrayList nommé myList
