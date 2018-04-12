@@ -7,19 +7,30 @@ import packageCharacters.Warrior;
 import packageWeaponsOffense.WeaponsOffense;
 import packageAllList.*;
 import packageWeaponsOffense.*;
+<<<<<<< HEAD
 import packageWeaponsOffense.*;
 import packageCharacters.*;
 import packageDefenseTools.*;
+=======
+import packageCharacters.*;
+>>>>>>> 0cd57a1b5f5f45556e7cb48b4eb9b31c7c1a9f4b
 
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 
+/**
+ * The type Choix perso.
+ */
 public class ChoixPerso {
     private static Scanner sc;
-    
-    public void choixPersonnage(){
+
+	/**
+	 * Choix personnage.
+	 */
+	public void choixPersonnage(){
+
         sc = new Scanner(System.in);
         AllList newList = new AllList();
         boolean choixDePerso = true;
