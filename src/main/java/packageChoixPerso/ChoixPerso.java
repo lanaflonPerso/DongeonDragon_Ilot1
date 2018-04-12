@@ -2,7 +2,11 @@ package packageChoixPerso;
 
 import packageAllList.*;
 import packageWeaponsOffense.*;
+import packageWeaponsOffense.*;
 import packageCharacters.*;
+import packageDefenseTools.*;
+import packageCharacters.*;
+
 
 
 import java.util.ArrayList;
@@ -21,7 +25,9 @@ public class ChoixPerso {
 	public void choixPersonnage(){
 
         sc = new Scanner(System.in);
-        AllList newList = new AllList();
+        WeaponsOffenseList newList = new WeaponsOffenseList();
+        CharactersPlayerList listNew = new CharactersPlayerList();
+		AllList nList = new AllList();
         boolean choixDePerso = true;
         boolean choixWeappon = true;
         String sChoiceWeappon; 
@@ -51,7 +57,7 @@ public class ChoixPerso {
             
             if (choix.equals("1")) {
 	            System.out.println("Vous etes un Guerrier");
-	            System.out.println("Choisie tes armes dans la liste : \n");
+	            System.out.println("Choisis tes armes dans la liste : \n");
 	            System.out.println("Tu as le droit à 2 armes.");
             
 	            ArrayList<WeaponsOffense> alArmeListWarrior = newList.armeListWarrior();
@@ -64,28 +70,31 @@ public class ChoixPerso {
 	            System.out.println("while(choixWeappon) : " + choixWeappon);
 	            while(choixWeappon) {
 	            	sChoiceWeappon = sc.nextLine();
-	            	
-	            	
+
 	            	switch(sChoiceWeappon){
 
 	            		case "0" :
 	            			nChoiceWeappon = Integer.parseInt(sChoiceWeappon);
-	            			newList.charactersWarriorList.add(new Warrior("Naia", "Je suis un Guerrier", "100", "15", alArmeListWarrior.get(nChoiceWeappon), null));
-	            			newList.displayArrayList(newList.charactersWarriorList);
+	            			listNew.charactersWarriorList.add(new Warrior("Naia", "Je suis un Guerrier", "100", "15", alArmeListWarrior.get(nChoiceWeappon), null));
+	            			nList.displayArrayList(listNew.charactersWarriorList);
 	            			choixWeappon = false;
 		            		break;
 		            	
 		            	case "1" :
 		            		nChoiceWeappon = Integer.parseInt(sChoiceWeappon);
-		            		newList.charactersWarriorList.add(new Warrior("HellRose", "Je suis un Guerrier", "100", "15", alArmeListWarrior.get(nChoiceWeappon), null));
-		            		newList.displayArrayList(newList.charactersWarriorList);
+
+		            		listNew.charactersWarriorList.add(new Warrior("HellRose", "Je suis un Guerrier", "100", "15", alArmeListWarrior.get(nChoiceWeappon), null));
+		            		nList.displayArrayList(listNew.charactersWarriorList);
+
 		            		choixWeappon = false;
 		            		break;
 		            		
 		            	case "2" :
 		            		nChoiceWeappon = Integer.parseInt(sChoiceWeappon);
-		            		newList.charactersWarriorList.add(new Warrior("MalchanceMan", "Je suis un Guerrier malchanceux", "100", "15", alArmeListWarrior.get(nChoiceWeappon), null));
-		            		newList.displayArrayList(newList.charactersWarriorList);
+
+		            		listNew.charactersWarriorList.add(new Warrior("MalchanceMan", "Je suis un Guerrier malchanceux", "100", "15", alArmeListWarrior.get(nChoiceWeappon), null));
+		            		nList.displayArrayList(listNew.charactersWarriorList);
+
 		            		choixWeappon = false;
 		            		break;
 		            		
@@ -98,7 +107,7 @@ public class ChoixPerso {
 
             } else if (choix.equals("2")) {
                 System.out.println("Vous etes un Magicien");
-	            System.out.println("Choisie tes Sorts dans la liste : \n");
+	            System.out.println("Choisis tes Sorts dans la liste : \n");
 	            System.out.println("Tu as le droit à 2 Sorts.");
             
 	            ArrayList<WeaponsOffense> alSortListMagician = newList.sortListMagician();
@@ -114,22 +123,28 @@ public class ChoixPerso {
 	            	switch(sChoiceWeappon){
 	            		case "0" :
 	            			nChoiceWeappon = Integer.parseInt(sChoiceWeappon);
-	            			newList.charactersMagicianList.add(new Magician("Docteur Strange", "Je suis un Magicien", "100", "15", alSortListMagician.get(nChoiceWeappon), null));
-	            			newList.displayArrayList(newList.charactersMagicianList);
+
+	            			listNew.charactersMagicianList.add(new Magician("Docteur Strange", "Je suis un Magicien", "100", "15", alSortListMagician.get(nChoiceWeappon), null));
+	            			nList.displayArrayList(listNew.charactersMagicianList);
+
 		            		choixWeappon = false;
 		            		break;
 		            	
 		            	case "1" :
 		            		nChoiceWeappon = Integer.parseInt(sChoiceWeappon);
-		            		newList.charactersMagicianList.add(new Magician("La Sorciere Rouge", "Je suis un Magicien", "100", "15", alSortListMagician.get(nChoiceWeappon), null));
-		            		newList.displayArrayList(newList.charactersMagicianList);
+
+		            		listNew.charactersMagicianList.add(new Magician("La Sorciere Rouge", "Je suis un Magicien", "100", "15", alSortListMagician.get(nChoiceWeappon), null));
+		            		nList.displayArrayList(listNew.charactersMagicianList);
+
 		            		choixWeappon = false;
 		            		break;
 		            		
 		            	case "2" :
 		            		nChoiceWeappon = Integer.parseInt(sChoiceWeappon);
-		            		newList.charactersMagicianList.add(new Magician("Gandalf", "Je suis un Magicien", "100", "15", alSortListMagician.get(nChoiceWeappon), null));
-		            		newList.displayArrayList(newList.charactersMagicianList);
+
+		            		listNew.charactersMagicianList.add(new Magician("Gandalf", "Je suis un Magicien", "100", "15", alSortListMagician.get(nChoiceWeappon), null));
+		            		nList.displayArrayList(listNew.charactersMagicianList);
+
 		            		choixWeappon = false;
 		            		break;
 		            		
@@ -142,14 +157,12 @@ public class ChoixPerso {
 
             } else if(! "0".equals(choix)){
                 System.out.println("<----------------------------------------->");
-                System.out.println("Deux choix possible : 1-Guerrier 2-Magicien");
+                System.out.println("Deux choix possibles : 1-Guerrier 2-Magicien");
                 System.out.println("<----------------------------------------->");
             }
             
             if(! "0".equals(choix))
             	val++;
         }
-
-    }
-
+	}
     }

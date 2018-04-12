@@ -6,6 +6,8 @@ import packageEnemies.*;
 import packageInGame.LanceDeDe;
 import packageMenuIntroduction.MenuIntroduction;
 import packageChoixPerso.ChoixPerso;
+import packagePlayersNames.PlayersName;
+
 import java.util.Scanner;
 
 
@@ -32,40 +34,46 @@ public class GameStart {
     /**
      * In game.
      */
-    public  void InGame() {
+    public void InGame() {
 
         boolean restInGame = true;
         while (restInGame) {
             sc = new Scanner(System.in);
-             AllList allList = new AllList();
-             ChoixPerso choixPersonnel = new ChoixPerso();
-             LanceDeDe dede = new LanceDeDe();
-        System.out.println(MenuIntroduction.getDessinMenu());
-        System.out.println("Que voulez vous faire :\n\t1-Jouer\n\t2-Quitter");
-        String startGame = sc.nextLine();
-        
-        if (startGame.equals("1")) {
-            System.out.println("Nom du Player One");
-            String playeOneName = sc.nextLine();
-            allList.playerNameList(playeOneName);
+            AllList allList = new AllList();
+            DragonList dragonList = new DragonList();
+            SuccubeList succubeList = new SuccubeList();
+            WizzardList wizzardList = new WizzardList();
+            ShieldList shieldList = new ShieldList();
+            FilterList filterList = new FilterList();
+            PlayerNameList playerNameList = new PlayerNameList();
+            ChoixPerso choixPersonnel = new ChoixPerso();
+            LanceDeDe dede = new LanceDeDe();
+            ListEvent  listEvent = new ListEvent();
 
-            System.out.println("<----------------------->");
+            System.out.println(MenuIntroduction.getDessinMenu());
+            System.out.println("Que voulez vous faire :\n\t1-Jouer\n\t2-Quitter");
+            String startGame = sc.nextLine();
 
+            if (startGame.equals("1")) {
+                System.out.println("Nom du Player One");
+                String playeOneName = sc.nextLine();
+                playerNameList.playerNameList(playeOneName);
 
-
-            allList.displayArrayList((allList.playerNameList(playeOneName)));
-            allList.displayArrayList(allList.dragonList());
-            allList.displayArrayList(allList.succubeList());
-            allList.displayArrayList(allList.wizzardList());
-            allList.displayArrayList(allList.shieldList());
-            allList.displayArrayList(allList.filterList());
-            allList.displayArrayList(allList.listEvent());
+                System.out.println("<----------------------->");
 
 
+                allList.displayArrayList((playerNameList.playerNameList(playeOneName)));
+                allList.displayArrayList(dragonList.dragonList());
+                allList.displayArrayList(succubeList.succubeList());
+                allList.displayArrayList(wizzardList.wizzardList());
+                allList.displayArrayList(shieldList.shieldList());
+                allList.displayArrayList(filterList.filterList());
+                allList.displayArrayList(listEvent.listEvent());
 
-            System.out.println("<----------------------->");
 
-            choixPersonnel.choixPersonnage();
+                System.out.println("<----------------------->");
+
+                choixPersonnel.choixPersonnage();
 
                 boolean lanceDe = true;
 
@@ -86,9 +94,7 @@ public class GameStart {
                     }
 
                 }
-            }
-
-             else if (startGame.equals("2")) {
+            } else if (startGame.equals("2")) {
                 restInGame = false;
             } else {
                 System.out.println("<---------------------------------->");
@@ -98,7 +104,7 @@ public class GameStart {
         }
     }
 
-    }
+}
 
 
 

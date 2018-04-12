@@ -33,6 +33,7 @@ public abstract class Box {
 	 * @param name the name
 	 */
 	public void setName(String name) {
+
         this.name = name;
     }
 

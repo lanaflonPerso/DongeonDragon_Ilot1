@@ -11,10 +11,10 @@ public class MainClass {
      * @param args the input arguments
      */
     public static void main(String[] args) {
-     	// gameInit();
-    	GameBoard.GameBoardInit();
-    	//GameStart gameStart = new GameStart();
-    	//gameStart.InGame();
+//     	gameInit();s
+    	GameStart gameStart = new GameStart();
+    	gameStart.InGame();
+//       GameBoard.GameBoardInit();
     }
 }
 

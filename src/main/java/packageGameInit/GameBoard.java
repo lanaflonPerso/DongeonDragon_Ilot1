@@ -3,6 +3,7 @@ import java.util.ArrayList;
 //import java.util.Arrays;
 import java.util.Random;
 import packageAllList.AllList;
+import packageAllList.ListEvent;
 import packageBox.*;
 import packageEnemies.*;
 
@@ -13,15 +14,15 @@ public class GameBoard {
 														à 64 case mémoires qui prendrons comme valeurs null par défaut. */
 	
 	public static void GameBoardInit(){
-		
+
 		int boardLength = boardTest.length;
-		
-		ArrayList<Object> myList =  AllList.listEvent(); /*  Instance d'une nouvelle ArrayList nommé myList
+		ArrayList<Object> myList = ListEvent.listEvent(); /*  Instance d'une nouvelle ArrayList nommé myList
+
 		qui prend pour valeur la liste des évènements.*/
 		
 		int count = 0; // Création d'une variable de type int qui a pour valeur zero.
 		
-		Random r = new Random(); // instance d'un nouveal objet nommer r en utilisant la méthode random.
+		Random r = new Random(boardLength); // instance d'un nouveal objet nommer r en utilisant la méthode random.
 		
 		int boardPos; /* Attribution d'une d'une case mémoire 
 		qui va acceuillire la valeur de la position aléatoire des évènements dans le plateau.*/
