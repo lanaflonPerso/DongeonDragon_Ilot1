@@ -1,6 +1,6 @@
 package packageGameInit;
 import java.util.ArrayList;
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.Random;
 import packageAllList.AllList;
 import packageBox.*;
@@ -12,8 +12,9 @@ public class GameBoard {
 	public static Object boardTest[] = new Object[64]; /* Instance d'un nouveau tableau d'objets qui sera initialisé 
 														à 64 case mémoires qui prendrons comme valeurs null par défaut. */
 	
-	
 	public static void GameBoardInit(){
+		
+		int boardLength = boardTest.length;
 		
 		ArrayList<Object> myList =  AllList.listEvent(); /*  Instance d'une nouvelle ArrayList nommé myList
 		qui prend pour valeur la liste des évènements.*/
@@ -30,11 +31,13 @@ public class GameBoard {
 		while( count < myList.size()) {	/* Boucle qui va implémenter aléatoirement les évènements sur le plateau
 		et compter les nombres de tours effectués par la boucle.*/
 			
-			boardPos = r.nextInt(64); // variable qui prend pour valeur un int aléatoire de 0 à 64
+			boardPos = r.nextInt(boardLength); // variable qui prend pour valeur un int aléatoire de 0 à 64
 			
 			if (boardTest[boardPos] == null) { // Si la position aléatoire à comme valeur null alors ..
+				
 				boardTest[boardPos] = myList.get(count); /* J'écrase la valeur null à la position boardPos du tableau 
 										boardTest par l'objet de l'ArrayList myList à l'emplacement de valeur count. */
+				
 				count = count + 1; // la variable prend pour valeur la sienne plus un.
 			}
 		}
@@ -85,11 +88,11 @@ public class GameBoard {
 				
 			} else if (boardTest[i] instanceof BoxItemDefenseTools) {
 				
-				System.out.println("Une box défense sa mèèèère ! " + ((BoxItemDefenseTools)boardTest[i]).toString() + " chopé à la case " + i  + "\n");
+				System.out.println("Une box défense sa mèèèère ! " + ((BoxItemDefenseTools)boardTest[i]).getItemDefense() + " chopé à la case " + i  + "\n");
 				
 			} else if (boardTest[i] instanceof BoxItemOffense) {
 				
-				System.out.println("Yeah un Item offensif ! Sort ou Arme ? c'est ... " + ((BoxItemOffense)boardTest[i]).toString() + "\n");
+				System.out.println("Yeah un Item offensif ! Sort ou Arme ? c'est ... " + ((BoxItemOffense)boardTest[i]).getItemOffense() + "\n");
 				
 			}
 		}

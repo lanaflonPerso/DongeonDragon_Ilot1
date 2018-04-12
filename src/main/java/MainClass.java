@@ -1,3 +1,4 @@
+import packageGameInit.GameBoard;
 import packageGameStart.*;
 
 /**
@@ -10,9 +11,10 @@ public class MainClass {
      * @param args the input arguments
      */
     public static void main(String[] args) {
-//     	gameInit();
-    GameStart gameStart = new GameStart();
-       gameStart.InGame();
+     	// gameInit();
+    	GameBoard.GameBoardInit();
+    	//GameStart gameStart = new GameStart();
+    	//gameStart.InGame();
     }
 }
 

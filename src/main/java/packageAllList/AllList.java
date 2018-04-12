@@ -127,7 +127,7 @@ public class AllList {
     	return sortListMagician;
     }
 
-    public ArrayList<Object> listEvent() {
+    public static ArrayList<Object> listEvent() {
         ArrayList<Object> listEvent = new ArrayList<Object>();
         listEvent.add(new Wizzard("sorcier novice", "image", "40", "15"));
         listEvent.add(new Wizzard("sorcier apprenti", "image", "60", "25"));
