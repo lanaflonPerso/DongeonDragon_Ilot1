@@ -4,7 +4,15 @@ import packageDefenseTools.Filters;
 
 import java.util.ArrayList;
 
+/**
+ * The type Filter list.
+ */
 public class FilterList {
+    /**
+     * Filter list array list.
+     *
+     * @return the array list
+     */
     public ArrayList<Filters> filterList() {
         ArrayList<Filters> filtersListBox = new ArrayList<Filters>();
         filtersListBox.add(new Filters("Love", "5"));

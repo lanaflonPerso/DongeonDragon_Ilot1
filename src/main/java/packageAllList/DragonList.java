@@ -4,7 +4,15 @@ import packageEnemies.Dragon;
 
 import java.util.ArrayList;
 
+/**
+ * The type Dragon list.
+ */
 public class DragonList {
+    /**
+     * Dragon list array list.
+     *
+     * @return the array list
+     */
     public ArrayList<Dragon> dragonList() {
         ArrayList<Dragon> dragonsList = new ArrayList<Dragon>();
         dragonsList.add(new Dragon("Dragon Brun", "image", "90", "15"));
