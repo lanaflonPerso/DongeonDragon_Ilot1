@@ -1,19 +1,12 @@
 package packageChoixPerso;
 
-
-import packageAllList.AllList;
-import packageCharacters.Magician;
-import packageCharacters.Warrior;
-import packageWeaponsOffense.WeaponsOffense;
 import packageAllList.*;
 import packageWeaponsOffense.*;
-<<<<<<< HEAD
 import packageWeaponsOffense.*;
 import packageCharacters.*;
 import packageDefenseTools.*;
-=======
 import packageCharacters.*;
->>>>>>> 0cd57a1b5f5f45556e7cb48b4eb9b31c7c1a9f4b
+
 
 
 import java.util.ArrayList;
