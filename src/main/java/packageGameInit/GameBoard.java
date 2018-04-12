@@ -2,7 +2,7 @@ package packageGameInit;
 import java.util.ArrayList;
 //import java.util.Arrays;
 import java.util.Random;
-import packageAllList.AllList;
+//import packageAllList.AllList;
 import packageAllList.ListEvent;
 import packageBox.*;
 import packageEnemies.*;
