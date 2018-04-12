@@ -21,38 +21,18 @@ public abstract class CharactersPlayer {
         this.defenseTools = pDefenseTools;
     }
 
-    /**
-     * Gets weapon offense.
-     *
-     * @return the weapon offense
-     */
     public WeaponsOffense getWeaponOffense() {
         return weaponOffense;
     }
 
-    /**
-     * Sets weapon offense.
-     *
-     * @param weaponOffense the weapon offense
-     */
     public void setWeaponOffense(WeaponsOffense weaponOffense) {
         this.weaponOffense = weaponOffense;
     }
 
-    /**
-     * Gets defense tools.
-     *
-     * @return the defense tools
-     */
     public DefenseTools getDefenseTools() {
         return defenseTools;
     }
 
-    /**
-     * Sets defense tools.
-     *
-     * @param defenseTools the defense tools
-     */
     public void setDefenseTools(DefenseTools defenseTools) {
         this.defenseTools = defenseTools;
     }

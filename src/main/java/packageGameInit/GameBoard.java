@@ -12,7 +12,6 @@ public class GameBoard {
 	
 	public static Object boardTest[] = new Object[64]; /* Instance d'un nouveau tableau d'objets qui sera initialisé 
 														à 64 case mémoires qui prendrons comme valeurs null par défaut. */
-	
 	public static void GameBoardInit(){
 
 		int boardLength = boardTest.length;
