@@ -3,9 +3,6 @@ import packageCharacters.CharactersPlayer;
 import packageEnemies.CharactersEnemies;
 import packageWeaponsOffense.*;
 
-/**
- * The type Combat sword.
- */
 public class CombatSword implements CombatType {
 
     @Override

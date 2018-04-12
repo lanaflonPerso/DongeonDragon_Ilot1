@@ -3,9 +3,6 @@ package packageCombat;
 import packageCharacters.CharactersPlayer;
 import packageEnemies.CharactersEnemies;
 
-/**
- * The type Combat bow.
- */
 public class CombatBow implements CombatType {
 
     @Override

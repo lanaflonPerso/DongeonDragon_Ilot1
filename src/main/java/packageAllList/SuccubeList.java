@@ -4,15 +4,7 @@ import packageEnemies.Succube;
 
 import java.util.ArrayList;
 
-/**
- * The type Succube list.
- */
 public class SuccubeList {
-    /**
-     * Succube list array list.
-     *
-     * @return the array list
-     */
     public ArrayList<Succube> succubeList() {
 
         ArrayList<Succube> succubesList = new ArrayList<Succube>();

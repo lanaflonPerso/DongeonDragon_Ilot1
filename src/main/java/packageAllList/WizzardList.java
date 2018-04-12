@@ -4,15 +4,7 @@ import packageEnemies.Wizzard;
 
 import java.util.ArrayList;
 
-/**
- * The type Wizzard list.
- */
 public class WizzardList {
-    /**
-     * Wizzard list array list.
-     *
-     * @return the array list
-     */
     public ArrayList<Wizzard> wizzardList() {
         ArrayList<Wizzard> wizzardsList = new ArrayList<Wizzard>();
         wizzardsList.add(new Wizzard("sorcier novice", "image", "40", "15"));
