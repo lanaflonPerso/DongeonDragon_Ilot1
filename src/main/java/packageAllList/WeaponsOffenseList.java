@@ -4,8 +4,20 @@ import packageWeaponsOffense.*;
 
 import java.util.ArrayList;
 
+/**
+ * The type Weapons offense list.
+ */
 public class WeaponsOffenseList {
+    /**
+     * The Weapons offense list.
+     */
     public ArrayList<WeaponsOffense> weaponsOffenseList = new ArrayList<WeaponsOffense>();
+
+    /**
+     * Sort list box array list.
+     *
+     * @return the array list
+     */
     public  ArrayList<WeaponsOffense>sortListBox(){
         ArrayList<WeaponsOffense> sortsListBox = new ArrayList<WeaponsOffense>();
         sortsListBox.add(new Bow("Bow", "50", "80"));
@@ -13,6 +25,11 @@ public class WeaponsOffenseList {
         return sortsListBox;
     }
 
+    /**
+     * Arme list box array list.
+     *
+     * @return the array list
+     */
     public  ArrayList<WeaponsOffense>armeListBox(){
         ArrayList<WeaponsOffense> armesListBox = new ArrayList<WeaponsOffense>();
         armesListBox.add(new Sword("Excaliburne", "65"));
@@ -20,6 +37,11 @@ public class WeaponsOffenseList {
         return armesListBox;
     }
 
+    /**
+     * Arme list warrior array list.
+     *
+     * @return the array list
+     */
     public  ArrayList<WeaponsOffense>armeListWarrior(){
         ArrayList<WeaponsOffense> armesListWarrior = new ArrayList<WeaponsOffense>();
         armesListWarrior.add(new Mace("KiKogne", "55"));
@@ -28,6 +50,11 @@ public class WeaponsOffenseList {
         return armesListWarrior;
     }
 
+    /**
+     * Sort list magician array list.
+     *
+     * @return the array list
+     */
     public  ArrayList<WeaponsOffense>sortListMagician(){
         ArrayList<WeaponsOffense> sortListMagician = new ArrayList<WeaponsOffense>();
         sortListMagician.add(new FireWall("FireWall", "25"));
