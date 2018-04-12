@@ -1,3 +1,4 @@
+import packageGameInit.GameBoard;
 import packageGameStart.*;
 
 /**
@@ -13,7 +14,11 @@ public class MainClass {
 //     	gameInit();
     GameStart gameStart = new GameStart();
        gameStart.InGame();
+
+//        GameBoard.GameBoardInit();
     }
+
+
 }
 
 

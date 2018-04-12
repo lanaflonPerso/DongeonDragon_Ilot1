@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 import packageAllList.AllList;
+import packageAllList.ListEvent;
 import packageBox.*;
 import packageEnemies.*;
 
@@ -15,7 +16,7 @@ public class GameBoard {
 	
 	public static void GameBoardInit(){
 		
-		ArrayList<Object> myList =  AllList.listEvent(); /*  Instance d'une nouvelle ArrayList nommé myList
+		ArrayList<Object> myList = ListEvent.listEvent(); /*  Instance d'une nouvelle ArrayList nommé myList
 		qui prend pour valeur la liste des évènements.*/
 		
 		int count = 0; // Création d'une variable de type int qui a pour valeur zero.
