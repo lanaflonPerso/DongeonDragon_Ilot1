@@ -13,15 +13,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-/**
- * The type Choix perso.
- */
 public class ChoixPerso {
     private static Scanner sc;
 
-	/**
-	 * Choix personnage.
-	 */
 	public void choixPersonnage(){
 
         sc = new Scanner(System.in);
