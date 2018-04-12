@@ -52,6 +52,22 @@ public abstract class CharactersPlayer {
         this.defenseTools = pDefenseTools;
     }
 
+    public WeaponsOffense getWeaponOffense() {
+        return weaponOffense;
+    }
+
+    public void setWeaponOffense(WeaponsOffense weaponOffense) {
+        this.weaponOffense = weaponOffense;
+    }
+
+    public DefenseTools getDefenseTools() {
+        return defenseTools;
+    }
+
+    public void setDefenseTools(DefenseTools defenseTools) {
+        this.defenseTools = defenseTools;
+    }
+
     /**
      * Gets name.
      *
