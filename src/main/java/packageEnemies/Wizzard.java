@@ -21,5 +21,12 @@ public class Wizzard extends CharactersEnemies {
     public String toString() {
         return super.toString() + " level d'attaque : " + getAttackLevel();
     }
+
+    @Override
+    public void interactWithUser() {
+        System.out.println("Je suis tombé sur un " + getName() + " à la case " + getPositionPlateau());
+        System.out.println("Il possède une puissance de : " + getAttackLevel() + "\n");
+
+    }
 }
  

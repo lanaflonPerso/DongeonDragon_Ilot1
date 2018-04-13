@@ -22,5 +22,11 @@ public class BoxItemOffense extends Box {
 	public String toString() {
 		return super.toString() + "Nom :" + getItemOffense();
 	}
-	
+
+	@Override
+	public void interactWithUser() {
+
+		System.out.println("Yeah un Item offensif ! Sort ou Arme ? c'est ... " + getItemOffense() + getPositionPlateau() + "\n");
+
+	}
 }

@@ -20,4 +20,11 @@ public class BoxBonus extends Box {
     public String toString() {
         return super.toString() + "Avance de : "+ getBoxBonus()  + "cases";
     }
+
+    @Override
+    public void interactWithUser() {
+
+        System.out.println("Je suis tombé sur une " + getName() + " à la case " + getPositionPlateau() + "qui me fais avancer de " + getBoxBonus() + " cases" + "\n");
+
+    }
 }

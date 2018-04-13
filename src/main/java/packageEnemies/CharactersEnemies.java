@@ -1,6 +1,8 @@
 package packageEnemies;
 
-public abstract class CharactersEnemies {
+import packageEvent.Event;
+
+public abstract class CharactersEnemies extends Event {
 
     private String name;
     private String image;

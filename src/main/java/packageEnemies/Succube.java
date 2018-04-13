@@ -21,4 +21,13 @@ public class Succube extends CharactersEnemies {
     public String toString() {
         return super.toString() + " level d'attaque : " + getAttackLevel();
     }
+
+    @Override
+    public void interactWithUser() {
+
+        System.out.println("Je suis tombé sur une " + getName() + " à la case " + getPositionPlateau());
+        System.out.println("Elle possède une puissance de : " + getAttackLevel() + "\n");
+
+    }
+
 }

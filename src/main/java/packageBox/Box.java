@@ -1,6 +1,8 @@
 package packageBox;
 
-public abstract class Box {
+import packageEvent.Event;
+
+public abstract class Box extends Event {
 
 
 	private String name;
@@ -23,5 +25,4 @@ public abstract class Box {
         return "Nom de la caisse surprise : " + getName();
     }
 
-//	public abstract void interactWithBox();
 }

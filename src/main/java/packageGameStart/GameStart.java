@@ -46,7 +46,6 @@ public class GameStart {
 
                 System.out.println("<----------------------->");
 
-
                 allList.displayArrayList((playerNameList.playerNameList(playeOneName)));
                 allList.displayArrayList(dragonList.dragonList());
                 allList.displayArrayList(succubeList.succubeList());
@@ -54,7 +53,6 @@ public class GameStart {
                 allList.displayArrayList(shieldList.shieldList());
                 allList.displayArrayList(filterList.filterList());
                 allList.displayArrayList(listEvent.listEvent());
-
 
                 System.out.println("<----------------------->");
 

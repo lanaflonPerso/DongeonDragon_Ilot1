@@ -6,6 +6,7 @@ import packageDefenseTools.Shields;
 import packageEnemies.Dragon;
 import packageEnemies.Succube;
 import packageEnemies.Wizzard;
+import packageEvent.Event;
 import packageWeaponsOffense.Bow;
 import packageWeaponsOffense.Invisibility;
 import packageWeaponsOffense.Lightning;
@@ -14,8 +15,8 @@ import packageWeaponsOffense.Mace;
 import java.util.ArrayList;
 
 public class ListEvent {
-    public static ArrayList<Object> listEvent() {
-        ArrayList<Object> listEvent = new ArrayList<Object>();
+    public static ArrayList<Event> listEvent() {
+        ArrayList<Event> listEvent = new ArrayList<Event>();
         listEvent.add(new Wizzard("sorcier novice", "image", "40", "15"));
         listEvent.add(new Wizzard("sorcier apprenti", "image", "60", "25"));
         listEvent.add(new Wizzard("sorcier expert", "image", "80", "50"));

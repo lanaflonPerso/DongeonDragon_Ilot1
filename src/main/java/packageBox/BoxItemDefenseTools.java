@@ -23,9 +23,11 @@ public class BoxItemDefenseTools extends Box {
         return super.toString() + "Nom : " + getItemDefense();
     }
 
+    @Override
+    public void interactWithUser() {
 
-//    @Override
-//    public void interactWithBox(){
-//        perso.sqetItemDefensetOOLLS5
-//    }
+        System.out.println("Une box défense sa mèèèère ! " + getItemDefense() + " chopé à la case " + getPositionPlateau() + "\n");
+
+    }
+
 }
