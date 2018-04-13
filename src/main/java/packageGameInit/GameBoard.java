@@ -1,25 +1,23 @@
 package packageGameInit;
 import java.util.ArrayList;
-//import java.util.Arrays;
+import java.util.Arrays;
 import java.util.Random;
-//import packageAllList.AllList;
-import packageAllList.ListEvent;
-import packageBox.*;
-import packageEnemies.*;
+//import packageGameInit.packageAllList.AllList;
+import packageGameInit.packageAllList.ListEvent;
 import packageEvent.Event;
 
 
 public class GameBoard {
 	
-	public Event[] boardTest = new Event[29];  /* Instance d'un nouveau tableau d'objets qui sera initialisé
-														à 64 case mémoires qui prendrons comme valeurs null par défaut. */
+	public Event[] boardTest = new Event[64]; /* Instance d'un nouveau tableau d'objets qui sera initialisé
+												à 64 case mémoires qui prendrons comme valeurs null par défaut. */
 	public void gameBoardInit(){
 
 		int boardLength = boardTest.length;
 		ArrayList<Event> myList = ListEvent.listEvent(); /*  Instance d'une nouvelle ArrayList nommé myList
 
 		qui prend pour valeur la liste des évènements.*/
-		
+
 		int count = 0; // Création d'une variable de type int qui a pour valeur zero.
 		
 		Random r = new Random(boardLength); // instance d'un nouveal objet nommer r en utilisant la méthode random.
@@ -34,7 +32,7 @@ public class GameBoard {
 			
 			boardPos = r.nextInt(boardLength); // variable qui prend pour valeur un int aléatoire de 0 à 64
 			
-			if (boardTest[boardPos] == null) { // Si la position aléatoire à comme valeur null alors ..
+			if (boardTest[boardPos] == null ) { // Si la position aléatoire à comme valeur null alors ..
 				
 				boardTest[boardPos] = myList.get(count); /* J'écrase la valeur null à la position boardPos du tableau 
 										boardTest par l'objet de l'ArrayList myList à l'emplacement de valeur count. */
@@ -55,7 +53,8 @@ public class GameBoard {
 		//AllList.displayArrayList(AllList.listEvent());
 
 		for (int i = 0; i < boardTest.length; i++) {
-			boardTest[i].interactWithUser();
+			if (boardTest[i] != null)
+				boardTest[i].interactWithUser();
 		}
 
 	}

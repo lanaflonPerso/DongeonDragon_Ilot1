@@ -8,7 +8,6 @@ public class MainClass {
 //    	gameStart.InGame();
         GameBoard gameBoard = new GameBoard();
        gameBoard.gameBoardInit();
-       int a = 1;
     }
 }
 

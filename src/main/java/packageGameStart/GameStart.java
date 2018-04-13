@@ -1,12 +1,10 @@
 package packageGameStart;
 
-import packageAllList.*;
-import packageEnemies.*;
+import packageGameInit.packageAllList.*;
+import packageEvent.packageEnemies.*;
 
 import packageInGame.LanceDeDe;
-import packageMenuIntroduction.MenuIntroduction;
-import packageChoixPerso.ChoixPerso;
-import packagePlayersNames.PlayersName;
+import packageInGame.ChoixPerso;
 
 import java.util.Scanner;
 

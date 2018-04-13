@@ -1,10 +1,8 @@
 package packageCharacters;
 
-import packageWeaponsOffense.*;
+import packageItems.packageWeaponsOffense.*;
 
-import java.util.ArrayList;
-
-import packageDefenseTools.Shields;
+import packageItems.packageDefenseTools.Shields;
 
 public class Warrior extends CharactersPlayer {
 
