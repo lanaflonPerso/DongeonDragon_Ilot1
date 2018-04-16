@@ -1,7 +1,7 @@
 package packageCombat;
 
 import packageCharacters.CharactersPlayer;
-import packageEnemies.CharactersEnemies;
+import packageEvent.packageEnemies.CharactersEnemies;
 
 public class CombatMace implements CombatType {
 

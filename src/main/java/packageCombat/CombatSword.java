@@ -1,7 +1,6 @@
 package packageCombat;
 import packageCharacters.CharactersPlayer;
-import packageEnemies.CharactersEnemies;
-import packageWeaponsOffense.*;
+import packageEvent.packageEnemies.CharactersEnemies;
 
 public class CombatSword implements CombatType {
 

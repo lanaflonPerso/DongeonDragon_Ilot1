@@ -1,13 +1,13 @@
 
-packageAllList
-packageBox
+packageGameInit.packageAllList
+packageEvent.packageBox
 packageCharacters
 packageChoixPerso
-packageDefenseTools
-packageEnemies
+packageItems.packageDefenseTools
+packageEvent.packageEnemies
 packageGameInit
 packageGameStart
 packageInGame
 packageMenuIntroduction
 packagePlayersNames
-packageWeaponsOffense
+packageItems.packageWeaponsOffense

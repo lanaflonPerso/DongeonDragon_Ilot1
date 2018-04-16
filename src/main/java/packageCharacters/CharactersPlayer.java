@@ -1,7 +1,7 @@
 package packageCharacters;
 
-import packageWeaponsOffense.WeaponsOffense;
-import packageDefenseTools.DefenseTools;
+import packageItems.packageWeaponsOffense.WeaponsOffense;
+import packageItems.packageDefenseTools.DefenseTools;
 
 public abstract class CharactersPlayer {
 
