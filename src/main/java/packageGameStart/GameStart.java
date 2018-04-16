@@ -1,6 +1,8 @@
 package packageGameStart;
 
+import packageGameInit.GameBoard;
 import packageGameInit.packageAllList.*;
+import packageEvent.Event;
 import packageEvent.packageEnemies.*;
 
 import packageInGame.LanceDeDe;
@@ -42,18 +44,6 @@ public class GameStart {
                 String playeOneName = sc.nextLine();
                 playerNameList.playerNameList(playeOneName);
 
-                System.out.println("<----------------------->");
-
-                allList.displayArrayList((playerNameList.playerNameList(playeOneName)));
-                allList.displayArrayList(dragonList.dragonList());
-                allList.displayArrayList(succubeList.succubeList());
-                allList.displayArrayList(wizzardList.wizzardList());
-                allList.displayArrayList(shieldList.shieldList());
-                allList.displayArrayList(filterList.filterList());
-                allList.displayArrayList(listEvent.listEvent());
-
-                System.out.println("<----------------------->");
-
                 choixPersonnel.choixPersonnage();
 
                 boolean lanceDe = true;
@@ -62,7 +52,8 @@ public class GameStart {
                     System.out.println("Que voulez vous faire :\n\t1-Commencer une Partie\n\t2-Sortir\n\t3-Quitter le jeu");
                     String choixDeSix = sc.nextLine();
                     if (choixDeSix.equals("1")) {
-                        dede.getNewBoardPositionPlayer();
+                        /*dede.getNewBoardPositionPlayer();*/
+                    	moveGamer();
                     } else if (choixDeSix.equals("2")) {
                         lanceDe = false;
                     } else if (choixDeSix.equals("3")) {
@@ -85,7 +76,28 @@ public class GameStart {
         }
     }
 
-}
+    public void moveGamer() {
+	    Event[] boardEvent = null;
+		int moveBoard = 0;
+		int finishBoard = 0;
+	    GameBoard gameBoard = new GameBoard();
+	    boardEvent = gameBoard.gameInit();
+			
+	    LanceDeDe lanceDeDe = new LanceDeDe();
+	    
+	    try {
+	        while (moveBoard != -1) {
+	        	moveBoard=lanceDeDe.getNewBoardPositionPlayer();
+	    		System.out.println(boardEvent[moveBoard]);
+	        }
+	    }catch(ArrayIndexOutOfBoundsException e) {
+	    	if(moveBoard > 63)
+	    		System.out.println("Vous avez fini");
+		 }
+	     }
+    }
+    
+
 
 
 
