@@ -30,7 +30,7 @@ public class GameStart {
             FilterList filterList = new FilterList();
             PlayerNameList playerNameList = new PlayerNameList();
             ChoixPerso choixPersonnel = new ChoixPerso();
-            LanceDeDe dede = new LanceDeDe();
+            LanceDeDe dede = new getBoardPositionPlayer();
             ListEvent  listEvent = new ListEvent();
 
             System.out.println(MenuIntroduction.getDessinMenu());

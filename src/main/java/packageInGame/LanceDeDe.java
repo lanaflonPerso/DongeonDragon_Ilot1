@@ -15,110 +15,49 @@ public class LanceDeDe {
         return resultatDeSix;
     }
 
-    public  void plateauDeJeu() {
+    public int getNewBoardPositionPlayer() {
         sc = new Scanner(System.in);
-        LanceDeDe dede = new LanceDeDe();
-        boolean bouDuChemin = true;
-        int plateauJeu[] = new int[64];
-        int plateau = 50;
-        int test = 0;
-        
-        boolean loop = true;
-        boolean loop1 = true;
-        
+        LanceDeDe dede = new getNewBoardPositionPlayer();
 
-        while (loop) {
-            if (plateau < 64) {
+        int positionPerso = 0;
+        int lastPosition = 0;
+        
+        boolean moveBoard = true;
+        boolean finishBoard = true;
+
+        while (moveBoard) {
+            if (positionPerso < 64) {
                 System.out.println("<---------------------------------->");
                 System.out.println("Lancé le Dé en Appuyant sur entée");
                 System.out.println("<---------------------------------->");
                 sc.nextLine();
                 System.out.println("<---------------------------------->");
-                test = dede.deSix();
-                plateau += test;
-                System.out.println("Votre position sur le plateau est : " + plateau + " <= 63 :");
-                //plateauJeu[plateau] = plateau;
-            } else loop = false;
+                lastPosition = dede.deSix();
+                positionPerso += lastPosition;
+                System.out.println("Votre position sur le positionPerso est : " + positionPerso + " <= 63 :");
+            } else moveBoard = false;
         }
 
-        while (loop1) {
+        while (finishBoard) {
 
-            plateau -= test;
+            positionPerso -= lastPosition;
             System.out.println("<---------------------------------->");
             System.out.println("<---------Décrémentation----------->");
             System.out.println("<---------------------------------->");
 
             sc.nextLine();
-            test = dede.deSix();
-            plateau += test;
+            lastPosition = dede.deSix();
+            positionPerso += lastPosition;
 
-            System.out.println("<-------------Lancer de Dé = " + test + "--------------------->");
-            //plateauJeu[plateau] = plateau;
-            if (plateau > 64) {
-                System.out.println("if(" + plateau + " > 64 )");
-                loop1 = true;
+            System.out.println("<-------------Lancer de Dé = " + lastPosition + "--------------------->");
+            if (positionPerso > 64) {
+                System.out.println("if(" + positionPerso + " > 64 )");
+                finishBoard = true;
             } else {
-                loop1 = false;
-                System.out.println("Valeur du plateau final : " + plateau);
+                finishBoard = false;
+                System.out.println("Valeur du positionPerso final : " + positionPerso);
             }
         }
-
+        return;
     }
 }
-
-///// Garbage
-
-// Boucle while with try and catch, if & else.
-/*while (bouDuChemin) {
-try {
-    if (plateauJeu[plateau] < 64) {
-        System.out.println("<---------------------------------->");
-        System.out.println("Lancé le Dé en Appuyant sur entée");
-        System.out.println("<---------------------------------->");
-        String lanceDe = sc.nextLine();
-        System.out.println("<---------------------------------->");
-        plateau += deSix();
-        System.out.println("Votre position sur le plateau :" + plateau);
-        plateauJeu[plateau] = plateau;
-
-    } else {
-        System.out.println("<---------------------------------->");
-        System.out.println("Lancé le Dé en Appuyant sur entée");
-        System.out.println("<---------------------------------->");
-        String lanceDe = sc.nextLine();
-        System.out.println("<---------------------------------->");
-        plateau += deSix();
-        plateauJeu[plateau] = plateau;
-    }
-} catch (ArrayIndexOutOfBoundsException e) {
-    System.out.println("////////////////////////////////////////////////////////////////////////////" + "\n/////////////////////Vous étes au bout du chemin////////////////////////////" + "\n////////////////////////////////////////////////////////////////////////////");
-    bouDuChemin = false;
-}
-}*/
-
-/*while (bouDuChemin) {
-try {
-    if (plateauJeu[plateau] < 64) {
-        System.out.println("<---------------------------------->");
-        System.out.println("Lancé le Dé en Appuyant sur entée");
-        System.out.println("<---------------------------------->");
-        String lanceDe = sc.nextLine();
-        System.out.println("<---------------------------------->");
-        plateau += deSix();
-        System.out.println("Votre position sur le plateau :" + plateau);
-        plateauJeu[plateau] = plateau;
-
-    } else {
-        System.out.println("<---------------------------------->");
-        System.out.println("Lancé le Dé en Appuyant sur entée");
-        System.out.println("<---------------------------------->");
-        String lanceDe = sc.nextLine();
-        System.out.println("<---------------------------------->");
-        plateau += deSix();
-        plateauJeu[plateau] = plateau;
-    }
-} catch (ArrayIndexOutOfBoundsException e) {
-    System.out.println("////////////////////////////////////////////////////////////////////////////" + "\n/////////////////////Vous étes au bout du chemin////////////////////////////" + "\n////////////////////////////////////////////////////////////////////////////");
-    bouDuChemin = false;
-}
-}*/
