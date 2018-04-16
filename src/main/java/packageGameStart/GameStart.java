@@ -24,12 +24,13 @@ public class GameStart {
         boolean restInGame = true;
         while (restInGame) {
             sc = new Scanner(System.in);
-            AllList allList = new AllList();
+            /*AllList allList = new AllList();
             DragonList dragonList = new DragonList();
             SuccubeList succubeList = new SuccubeList();
             WizzardList wizzardList = new WizzardList();
             ShieldList shieldList = new ShieldList();
-            FilterList filterList = new FilterList();
+            FilterList filterList = new FilterList();*/
+            
             PlayerNameList playerNameList = new PlayerNameList();
             ChoixPerso choixPersonnel = new ChoixPerso();
             LanceDeDe dede = new LanceDeDe();
