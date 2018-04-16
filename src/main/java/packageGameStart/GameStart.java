@@ -7,13 +7,13 @@ import packageEvent.packageEnemies.*;
 
 import packageInGame.LanceDeDe;
 import packageInGame.ChoixPerso;
-
-import java.util.Scanner;
+import packageKeyBoard.*;
 
 
 public class GameStart {
 
-    private static Scanner sc;
+    //private static Scanner sc;
+	
     Dragon dragon = null;
     Wizzard wizzard = null;
     Succube succube = null;
@@ -23,7 +23,7 @@ public class GameStart {
 
         boolean restInGame = true;
         while (restInGame) {
-            sc = new Scanner(System.in);
+            //sc = new Scanner(System.in);
             /*AllList allList = new AllList();
             DragonList dragonList = new DragonList();
             SuccubeList succubeList = new SuccubeList();
@@ -38,11 +38,13 @@ public class GameStart {
 
             System.out.println(MenuIntroduction.getDessinMenu());
             System.out.println("Que voulez vous faire :\n\t1-Jouer\n\t2-Quitter");
-            String startGame = sc.nextLine();
-
+            //String startGame = sc.nextLine();
+            String startGame = KeyBoard.INPUT.nextLine();
             if (startGame.equals("1")) {
                 System.out.println("Nom du Player One");
-                String playeOneName = sc.nextLine();
+                //String playeOneName = sc.nextLine();
+                String playeOneName = KeyBoard.INPUT.nextLine();
+                
                 playerNameList.playerNameList(playeOneName);
 
                 choixPersonnel.choixPersonnage();
@@ -51,7 +53,8 @@ public class GameStart {
 
                 while (lanceDe) {
                     System.out.println("Que voulez vous faire :\n\t1-Commencer une Partie\n\t2-Sortir\n\t3-Quitter le jeu");
-                    String choixDeSix = sc.nextLine();
+                    //String choixDeSix = sc.nextLine();
+                    String choixDeSix = KeyBoard.INPUT.nextLine();
                     if (choixDeSix.equals("1")) {
                         /*dede.getNewBoardPositionPlayer();*/
                     	moveGamer();

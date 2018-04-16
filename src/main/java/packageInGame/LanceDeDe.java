@@ -1,10 +1,11 @@
 package packageInGame;
 
 import java.util.Random;
-import java.util.Scanner;
+
+import packageKeyBoard.*;
 
 public class LanceDeDe {
-    private static Scanner sc = new Scanner(System.in);
+    //private static Scanner sc = new Scanner(System.in);
     private int positionPerso = 0;
     private int lastPosition = 0;
     private boolean finishBoard = true;
@@ -24,7 +25,8 @@ public class LanceDeDe {
         System.out.println("<---------------------------------->");
         System.out.println("Lancé le Dé en Appuyant sur entée");
         System.out.println("<---------------------------------->");
-        sc.nextLine();
+        //sc.nextLine();
+        KeyBoard.INPUT.nextLine();
         System.out.println("<---------------------------------->");
         lastPosition = deSix();
         positionPerso += lastPosition;
@@ -42,7 +44,8 @@ public class LanceDeDe {
             System.out.println("<---------Décrémentation----------->");
             System.out.println("<---------------------------------->");
 
-            sc.nextLine();
+            //sc.nextLine();
+            KeyBoard.INPUT.nextLine();
             lastPosition = deSix();
             positionPerso += lastPosition;
 
