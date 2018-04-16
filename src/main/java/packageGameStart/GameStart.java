@@ -30,7 +30,7 @@ public class GameStart {
             FilterList filterList = new FilterList();
             PlayerNameList playerNameList = new PlayerNameList();
             ChoixPerso choixPersonnel = new ChoixPerso();
-            LanceDeDe dede = new getBoardPositionPlayer();
+            LanceDeDe dede = new LanceDeDe();
             ListEvent  listEvent = new ListEvent();
 
             System.out.println(MenuIntroduction.getDessinMenu());
@@ -62,7 +62,7 @@ public class GameStart {
                     System.out.println("Que voulez vous faire :\n\t1-Commencer une Partie\n\t2-Sortir\n\t3-Quitter le jeu");
                     String choixDeSix = sc.nextLine();
                     if (choixDeSix.equals("1")) {
-                        dede.plateauDeJeu();
+                        dede.getNewBoardPositionPlayer();
                     } else if (choixDeSix.equals("2")) {
                         lanceDe = false;
                     } else if (choixDeSix.equals("3")) {
