@@ -5,12 +5,11 @@ import java.util.Random;
 import packageKeyBoard.*;
 
 public class LanceDeDe {
-    //private static Scanner sc = new Scanner(System.in);
+
     private int positionPerso = 0;
     private int lastPosition = 0;
     private boolean finishBoard = true;
 
-    
     public  int deSix() {
     	
         Random deSix = new Random();
@@ -25,7 +24,6 @@ public class LanceDeDe {
         System.out.println("<---------------------------------->");
         System.out.println("Lancé le Dé en Appuyant sur entée");
         System.out.println("<---------------------------------->");
-        //sc.nextLine();
         KeyBoard.INPUT.nextLine();
         System.out.println("<---------------------------------->");
         lastPosition = deSix();
@@ -40,11 +38,11 @@ public class LanceDeDe {
     
     public int finishBoard() {
             positionPerso -= lastPosition;
+
             System.out.println("<---------------------------------->");
             System.out.println("<---------Décrémentation----------->");
             System.out.println("<---------------------------------->");
 
-            //sc.nextLine();
             KeyBoard.INPUT.nextLine();
             lastPosition = deSix();
             positionPerso += lastPosition;
