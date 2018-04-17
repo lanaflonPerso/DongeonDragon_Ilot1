@@ -3,6 +3,9 @@ import packageGameStart.*;
 import packageInGame.*;
 import packageEvent.*;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 public class MainClass {
     public static void main(String[] args) {
 
@@ -24,12 +27,9 @@ public class MainClass {
     	      	finishBoard=lanceDeDe.finishBoard();
     	   	}
          }
-        
-	   	
-   	 	
-        	
-   	 	 }
+
     }
+}
 
 
 
