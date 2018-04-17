@@ -76,8 +76,11 @@ public class GameStart {
 	    try {
 	        while (moveBoard != -1) {
 	        	moveBoard=lanceDeDe.getNewBoardPositionPlayer();
-	    		try {
-	    			boardEvent[moveBoard].interactWithUser();
+
+	        	try {
+	        		boardEvent[moveBoard].setPositionPlateau(moveBoard);
+	        		boardEvent[moveBoard].interactWithUser();
+
 	    		}catch(NullPointerException npe) {
 	    			if(boardEvent[moveBoard] == null) {
 	    				System.out.println("Tu es tombé sur une case herbeuse");
