@@ -28,12 +28,6 @@ public class GameInit {
 			}
 		}
 	
-		System.out.println("nombre de tours de ma boucle : " + count);
-		
-		for (int i = 0; i < boardTest.length; i++) {
-			if (boardTest[i] != null)
-				boardTest[i].interactWithUser();
-		}
 		return boardTest;
 	}
 }
