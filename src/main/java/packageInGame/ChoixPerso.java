@@ -3,18 +3,14 @@ package packageInGame;
 import packageGameInit.packageAllList.*;
 import packageItems.packageWeaponsOffense.*;
 import packageCharacters.*;
-
+import packageKeyBoard.*;
 
 import java.util.ArrayList;
-import java.util.Scanner;
-
 
 public class ChoixPerso {
-    private static Scanner sc;
 
 	public void choixPersonnage(){
 
-        sc = new Scanner(System.in);
         WeaponsOffenseList newList = new WeaponsOffenseList();
         CharactersPlayerList listNew = new CharactersPlayerList();
 		AllList nList = new AllList();
@@ -30,14 +26,16 @@ public class ChoixPerso {
             if(val == 0)
         	{
             	System.out.println("Que voulez vous être :\n\t1-Guerrier\n\t2-Magicien :  ");
-            	choix = sc.nextLine();
+
+            	choix = KeyBoard.INPUT.nextLine();
         	}
             else if(val > 0)
             {   
             	System.out.println("Veux-tu créer un autre perso ? ");
             	System.out.println("\t1-Guerrier\n\t2-Magicien :  ");
             	System.out.println("\t0-Quiter : ");
-            	choix = sc.nextLine();
+
+            	choix = KeyBoard.INPUT.nextLine();
             	
             	if(choix.equals("1") || choix.equals("2"))
             		choixWeappon = true;
@@ -58,8 +56,10 @@ public class ChoixPerso {
 	            }
 	            
 	            System.out.println("while(choixWeappon) : " + choixWeappon);
+
 	            while(choixWeappon) {
-	            	sChoiceWeappon = sc.nextLine();
+
+	            	sChoiceWeappon = KeyBoard.INPUT.nextLine();
 
 	            	switch(sChoiceWeappon){
 
@@ -108,7 +108,8 @@ public class ChoixPerso {
 	            }
 
 	            while(choixWeappon) {
-	            	sChoiceWeappon = sc.nextLine();
+
+	            	sChoiceWeappon = KeyBoard.INPUT.nextLine();
 	            
 	            	switch(sChoiceWeappon){
 	            		case "0" :

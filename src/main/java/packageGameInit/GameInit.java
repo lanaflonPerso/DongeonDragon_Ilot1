@@ -2,7 +2,6 @@ package packageGameInit;
 
 import java.util.ArrayList;
 import java.util.Random;
-
 import packageEvent.Event;
 import packageGameInit.packageAllList.ListEvent;
 
@@ -23,8 +22,7 @@ public class GameInit {
 			boardPos = r.nextInt(boardLength); 
 	
 			if (boardTest[boardPos] == null )
-			{ 
-				
+			{
 				boardTest[boardPos] = myList.get(count);  
 				count = count + 1;
 			}
