@@ -27,7 +27,7 @@ public class ChoixPerso {
         	{
             	System.out.println("Que voulez vous être :\n\t1-Guerrier\n\t2-Magicien :  ");
 
-            	choix = KeyBoard.INPUT.nextLine();
+            	choix = KeyBoard.Input.nextLine();
         	}
             else if(val > 0)
             {   
@@ -35,7 +35,7 @@ public class ChoixPerso {
             	System.out.println("\t1-Guerrier\n\t2-Magicien :  ");
             	System.out.println("\t0-Quiter : ");
 
-            	choix = KeyBoard.INPUT.nextLine();
+            	choix = KeyBoard.Input.nextLine();
             	
             	if(choix.equals("1") || choix.equals("2"))
             		choixWeappon = true;
@@ -54,12 +54,11 @@ public class ChoixPerso {
 	            	System.out.println("\t---- " + i + " ----");
 	            	System.out.println(alArmeListWarrior.get(i));
 	            }
-	            
-	            System.out.println("while(choixWeappon) : " + choixWeappon);
+
 
 	            while(choixWeappon) {
 
-	            	sChoiceWeappon = KeyBoard.INPUT.nextLine();
+	            	sChoiceWeappon = KeyBoard.Input.nextLine();
 
 	            	switch(sChoiceWeappon){
 
@@ -109,7 +108,7 @@ public class ChoixPerso {
 
 	            while(choixWeappon) {
 
-	            	sChoiceWeappon = KeyBoard.INPUT.nextLine();
+	            	sChoiceWeappon = KeyBoard.Input.nextLine();
 	            
 	            	switch(sChoiceWeappon){
 	            		case "0" :

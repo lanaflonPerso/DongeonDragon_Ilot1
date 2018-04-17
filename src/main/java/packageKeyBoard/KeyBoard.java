@@ -4,5 +4,5 @@ import java.util.Scanner;
 
 public class KeyBoard {
 
-	public static Scanner INPUT = new Scanner(System.in);
+	public static Scanner Input = new Scanner(System.in);
 }
