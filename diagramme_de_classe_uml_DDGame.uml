@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="411.6281588763567" y="31.0">packageGameInit</node>
+    <node x="84.3732902846379" y="114.21152852684668">packageEvent</node>
+    <node x="279.2919468061735" y="438.94025117336935">packageGameStart</node>
+    <node x="790.9139400734293" y="594.0057746914463">packageCharacters</node>
+    <node x="1022.3366860023796" y="593.2486508730491">packageCombat</node>
+    <node x="286.85141017658646" y="754.7072525976076">packageKeyBoard</node>
+    <node x="0.0" y="392.06001699437326">MainClass</node>
+    <node x="556.2850069484404" y="594.8208171258382">packageInGame</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="packageGameStart" target="packageGameStart">
+      <point x="-44.5" y="14.5" />
+      <point x="323.7919468061735" y="482.94025117336935" />
+      <point x="317.7919468061735" y="488.94025117336935" />
+      <point x="264.2919468061735" y="488.94025117336935" />
+      <point x="258.2919468061735" y="482.94025117336935" />
+      <point x="258.2919468061735" y="466.69025117336935" />
+      <point x="264.2919468061735" y="460.69025117336935" />
+      <point x="-89.0" y="7.25" />
+    </edge>
+    <edge source="packageInGame" target="packageKeyBoard">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="packageCharacters" target="packageCharacters">
+      <point x="-44.75" y="-14.5" />
+      <point x="835.6639400734293" y="579.0057746914463" />
+      <point x="829.6639400734293" y="573.0057746914463" />
+      <point x="775.9139400734293" y="573.0057746914463" />
+      <point x="769.9139400734293" y="579.0057746914463" />
+      <point x="769.9139400734293" y="595.2557746914463" />
+      <point x="775.9139400734293" y="601.2557746914463" />
+      <point x="-89.5" y="-7.25" />
+    </edge>
+    <edge source="packageInGame" target="packageCharacters">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="packageGameStart" target="packageKeyBoard">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="packageGameStart" target="packageGameInit">
+      <point x="-4.767869778027517" y="-1.5057947336113955" />
+      <point x="-4.767869778027517" y="-1.505794733611424" />
+    </edge>
+    <edge source="packageGameStart" target="packageInGame">
+      <point x="-9.999999999999943" y="0.0" />
+      <point x="-9.999999999999943" y="0.0" />
+    </edge>
+    <edge source="packageCombat" target="packageCharacters">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="packageGameInit" target="packageGameInit">
+      <point x="40.25" y="-14.5" />
+      <point x="537.3781588763567" y="13.458333333333371" />
+      <point x="545.8364922096899" y="5.0" />
+      <point x="600.1698255430233" y="5.0" />
+      <point x="608.6281588763567" y="13.458333333333371" />
+      <point x="608.6281588763567" y="32.20833333333337" />
+      <point x="600.1698255430233" y="40.66666666666674" />
+      <point x="85.5" y="-4.8333333333332575" />
+    </edge>
+    <edge source="packageGameStart" target="packageEvent">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="MainClass" target="packageGameStart">
+      <point x="0.5644481902735379" y="-4.464459456697625" />
+      <point x="0.5644481902735237" y="-4.464459456697625" />
+    </edge>
+    <edge source="packageGameInit" target="packageEvent">
+      <point x="-20.843461946223975" y="0.0" />
+      <point x="-20.843461946223726" y="-5.6843418860808015E-14" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="344.0" y="174.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>Project Files</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
