@@ -28,7 +28,7 @@ public class LanceDeDe {
         System.out.println("<---------------------------------->");
         lastPosition = deSix();
         positionPerso += lastPosition;
-        System.out.println("Votre position sur le positionPerso est : " + positionPerso + " <= 63 :");
+
         return positionPerso;
     }
     else
