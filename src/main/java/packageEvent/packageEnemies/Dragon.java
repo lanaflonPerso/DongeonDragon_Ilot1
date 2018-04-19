@@ -27,6 +27,5 @@ public class Dragon extends CharactersEnemies {
 
         System.out.println("Je suis tombé sur un " + getName() + " à la case " + getPositionPlateau());
         System.out.println("Il possède une puissance de : " + getAttackLevel() + "\n");
-
     }
 }

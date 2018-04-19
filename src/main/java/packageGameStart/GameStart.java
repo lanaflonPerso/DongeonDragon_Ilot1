@@ -24,14 +24,13 @@ public class GameStart {
             PlayerNameList playerNameList = new PlayerNameList();
             ChoixPerso choixPersonnel = new ChoixPerso();
             LanceDeDe dede = new LanceDeDe();
-            ListEvent  listEvent = new ListEvent();
 
             System.out.println(MenuIntroduction.getDessinMenu());
             System.out.println("Que voulez vous faire :\n\t1-Jouer\n\t2-Quitter");
-            String startGame = KeyBoard.INPUT.nextLine();
+            String startGame = KeyBoard.Input.nextLine();
             if (startGame.equals("1")) {
                 System.out.println("Nom du Player One");
-                String playeOneName = KeyBoard.INPUT.nextLine();
+                String playeOneName = KeyBoard.Input.nextLine();
                 
                 playerNameList.playerNameList(playeOneName);
 
@@ -41,7 +40,7 @@ public class GameStart {
 
                 while (lanceDe) {
                     System.out.println("Que voulez vous faire :\n\t1-Commencer une Partie\n\t2-Sortir\n\t3-Quitter le jeu");
-                    String choixDeSix = KeyBoard.INPUT.nextLine();
+                    String choixDeSix = KeyBoard.Input.nextLine();
 
                     if (choixDeSix.equals("1")) {
                     	moveGamer();
@@ -69,7 +68,7 @@ public class GameStart {
     public void moveGamer() {
 	    Event[] boardEvent = null;
 		int moveBoard = 0;
-		int finishBoard = 0;
+
 	    GameBoard gameBoard = new GameBoard();
 	    boardEvent = gameBoard.gameInit();
 	    LanceDeDe lanceDeDe = new LanceDeDe();
@@ -77,7 +76,16 @@ public class GameStart {
 	    try {
 	        while (moveBoard != -1) {
 	        	moveBoard=lanceDeDe.getNewBoardPositionPlayer();
-	    		System.out.println(boardEvent[moveBoard]);
+
+	        	try {
+	        		boardEvent[moveBoard].setPositionPlateau(moveBoard);
+	        		boardEvent[moveBoard].interactWithUser();
+
+	    		}catch(NullPointerException npe) {
+	    			if(boardEvent[moveBoard] == null) {
+	    				System.out.println("Tu es tombé sur une case herbeuse");
+	    			}
+	    		}
 	        }
 	    }catch(ArrayIndexOutOfBoundsException e) {
 	    	if(moveBoard > 63)

@@ -24,11 +24,11 @@ public class LanceDeDe {
         System.out.println("<---------------------------------->");
         System.out.println("Lancé le Dé en Appuyant sur entée");
         System.out.println("<---------------------------------->");
-        KeyBoard.INPUT.nextLine();
+        KeyBoard.Input.nextLine();
         System.out.println("<---------------------------------->");
         lastPosition = deSix();
         positionPerso += lastPosition;
-        System.out.println("Votre position sur le positionPerso est : " + positionPerso + " <= 63 :");
+
         return positionPerso;
     }
     else
@@ -43,7 +43,7 @@ public class LanceDeDe {
             System.out.println("<---------Décrémentation----------->");
             System.out.println("<---------------------------------->");
 
-            KeyBoard.INPUT.nextLine();
+            KeyBoard.Input.nextLine();
             lastPosition = deSix();
             positionPerso += lastPosition;
 
