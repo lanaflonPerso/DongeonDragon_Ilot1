@@ -15,7 +15,7 @@ public class GameStart {
     Wizzard wizzard = null;
     Succube succube = null;
 
-    public void InGame() {
+    public void InGame(Event[] pBoardEvent) {
 
         boolean restInGame = true;
 
@@ -43,7 +43,7 @@ public class GameStart {
                     String choixDeSix = KeyBoard.Input.nextLine();
 
                     if (choixDeSix.equals("1")) {
-                    	moveGamer();
+                    	moveGamer(pBoardEvent);
                     } else if (choixDeSix.equals("2")) {
                         lanceDe = false;
                     } else if (choixDeSix.equals("3")) {
@@ -65,12 +65,11 @@ public class GameStart {
         }
     }
 
-    public void moveGamer() {
-	    Event[] boardEvent = null;
+    public void moveGamer(Event[] pBoardEvent) {
 		int moveBoard = 0;
 
 	    GameBoard gameBoard = new GameBoard();
-	    boardEvent = gameBoard.gameInit();
+	    pBoardEvent = gameBoard.gameInit();
 	    LanceDeDe lanceDeDe = new LanceDeDe();
 	    
 	    try {
@@ -78,11 +77,11 @@ public class GameStart {
 	        	moveBoard=lanceDeDe.getNewBoardPositionPlayer();
 
 	        	try {
-	        		boardEvent[moveBoard].setPositionPlateau(moveBoard);
-	        		boardEvent[moveBoard].interactWithUser();
+	        		pBoardEvent[moveBoard].setPositionPlateau(moveBoard);
+	        		pBoardEvent[moveBoard].interactWithUser();
 
 	    		}catch(NullPointerException npe) {
-	    			if(boardEvent[moveBoard] == null) {
+	    			if(pBoardEvent[moveBoard] == null) {
 	    				System.out.println("Tu es tombé sur une case herbeuse");
 	    			}
 	    		}

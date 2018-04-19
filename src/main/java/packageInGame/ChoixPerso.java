@@ -55,8 +55,6 @@ public class ChoixPerso {
 	            	System.out.println(alArmeListWarrior.get(i));
 	            }
 	            
-	            System.out.println("while(choixWeappon) : " + choixWeappon);
-
 	            while(choixWeappon) {
 
 	            	sChoiceWeappon = KeyBoard.Input.nextLine();
