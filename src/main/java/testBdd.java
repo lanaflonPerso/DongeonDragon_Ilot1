@@ -18,7 +18,6 @@ public class testBdd {
 
             String passwd = "Axel1+Lulu2";
 
-
             Connection conn = DriverManager.getConnection(url, user, passwd);
 
             System.out.println("Connexion effective !");

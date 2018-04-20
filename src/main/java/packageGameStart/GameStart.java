@@ -8,6 +8,8 @@ import packageInGame.LanceDeDe;
 import packageInGame.ChoixPerso;
 import packageKeyBoard.*;
 
+import java.util.ArrayList;
+
 
 public class GameStart {
 
@@ -18,7 +20,7 @@ public class GameStart {
     public void InGame(Event[] pBoardEvent) {
 
         boolean restInGame = true;
-
+        
         while (restInGame) {
             
             PlayerNameList playerNameList = new PlayerNameList();

@@ -7,8 +7,6 @@ import packageGameInit.packageAllList.ListEvent;
 
 public class GameInit {
 	
-
-
 	public Event[] gameBoardInit(){
 		Event[] boardTest = new Event[64]; 
 		int boardLength = boardTest.length;
